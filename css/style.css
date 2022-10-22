@@ -1,0 +1,316 @@
+/* root */
+:root {
+    --var-color-secondary: linear-gradient(to bottom, #973daa, #8b3cb2, #7c3db9, #683fc1, #4d41c9);
+}
+
+/* HTML et BODY */
+
+@font-face {
+    font-family: "SpaceCrow";
+    src: url("../res/Space\ Crow.otf");
+}
+
+body {
+    margin: 0px;
+    margin-top: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+
+body>a {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    background-color: grey;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    font-size: 35px;
+    border-top-left-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(0 0 0);
+    transition: 0.25s;
+}
+
+header {
+    font-size: 25px;
+    font-family: 'Russo One', sans-serif;
+    height: min-content;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    height: 35px;
+}
+
+header>nav>a {
+    color: #444444;
+    background-image: url("../img/fondNum1.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    filter: brightness(95%);
+}
+
+.right {
+    border-right: 1px solid grey;
+}
+
+header>nav>a:hover {
+    filter: brightness(70%);
+    font-size: 110%;
+}
+
+svg {
+    font-family: 'Russo One', sans-serif;
+    float: right;
+    position: absolute;
+    width: 50%; height: 40%;
+}
+
+svg text {
+    text-transform: uppercase;
+    animation: stroke 4s infinite alternate;
+    stroke-width: 2;
+    stroke: #365fa0;
+    font-size: 130px;
+}
+
+@keyframes stroke {
+    0%   {
+      fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1);
+      stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); }
+    80%  {fill: rgba(72,138,20,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+    100% {
+      fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0); 
+      stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
+
+/* SECTIONS */
+
+section>h1 ,footer>h1{
+    font-size: 56px;
+    font-family: sans-serif;
+}
+
+section, footer {
+    padding: 5px;
+    border-bottom: solid;
+    font-family: sans-serif;
+    border-bottom: grey;
+}
+
+section>div {
+    padding: 5px;
+    display: flex;
+}
+
+#s0 {
+    background-image: url("../img/fondNum1.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    min-height: 100vh;
+}
+
+#s0>img {
+    border-bottom: 6px black solid ;
+}
+
+#listes {
+    background-image: url("../img/fondCarb1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
+
+#projets {
+    background-image: url("../img/fondForet1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
+
+#apropos, #contacter, #tableaux {
+    background-color: grey;
+    color: white;
+}
+
+#apropos {
+    padding-inline: 20%;
+}
+
+#apropos>img {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#listes {
+    font-size: 25px;
+    color: white;
+    display: flex;
+}
+
+#listes>ul {
+    background-image: var(--var-color-secondary);
+    min-width: min-content;
+    max-width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 5%;
+}
+
+#qualites>ul>h2 {
+    margin: 5px;
+}
+
+li {
+    list-style-image: url("../img/carre.svg");
+}
+
+p {
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+#tableaux>div {
+    text-align: center;
+    margin: 15px 0px 15px 0px;
+}
+
+#tableaux>div>h2 {
+    font-size: 40px;
+    padding: 3px;
+    margin: auto;
+}
+
+table {
+    font-size: 18px;
+    background-color: black;
+    color: #222222;
+    max-width: 60%;
+    height: min-content;
+    margin-right: 15%;
+}
+
+.entete {
+    background-color: aqua;
+}
+
+.ligbis {
+    background-color: aquamarine;
+}
+
+.lig {
+    background-color: #E3E3E3;
+}
+
+#interets {
+    color: white;
+    padding-left: 55%;
+}
+
+#projets>h1 {
+    color: white;
+    text-shadow: 3px 3px 4px black;
+}
+
+#projets>div>div {
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    font-family: sans-serif;
+    border: 2px solid blue;
+    border-radius: 25% 3%;
+    background-color: grey;
+    text-align: center;
+    box-shadow: 3px 3px 4px black;
+}
+
+#projets>div>div>p {
+    margin-right: 8%;
+}
+
+#showprojets {
+    margin-inline: 35% 35%;
+    width: 30%; /*250px*/
+    height: 60px; /*56px*/
+    font-size: 30px;
+    background: var(--var-color-secondary);
+    border: 0;
+    color: white;
+    font-family: "SpaceCrow";
+    letter-spacing: 5px;
+    box-shadow: 6px 0px 0px #00E6F6;
+}
+
+#showprojets:hover {
+    margin-inline: 32% 32%;
+    width: 36%;
+    height: 66px;
+}
+
+#hideprojets {
+    margin-inline: 35% 35%;
+    width: 30%; /*250px*/
+    height: 60px; /*56px*/
+    font-size: 30px;
+    background: var(--var-color-secondary);
+    border: 0;
+    color: white;
+    font-family: "SpaceCrow";
+    letter-spacing: 5px;
+    box-shadow: 6px 0px 0px #00E6F6;
+}
+
+#hideprojets:hover {
+    margin-inline: 32% 32%;
+    width: 36%;
+    height: 66px;
+}
+
+img {
+    border-radius: 15px;
+}
+
+#projets>div>div>img {
+    width: 80%;
+}
+
+
+/* Footer */
+
+#contacter>ul>li {
+    display: flex;
+    align-items: baseline;
+    font-size: 25px;
+}
+
+#contacter>ul>li>h5 {
+    /* haut droite bas gauche*/
+    margin: 0 2% 2% 20%;
+    font-size: 30px;
+}
+
+.liencontact>a {
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+
+.liencontact :hover{
+    font-size: 110%;
+}
