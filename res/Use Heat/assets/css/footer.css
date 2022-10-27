@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    height: 275px;
+    background-color: var(--var-color-primary);
+}
+footer>ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+footer>ul>li>ul {
+    padding-left: 15px;
+}
+footer>ul>li>ul>li {
+    margin-bottom: 10px;
+    transition: 0.25s;
+    border-radius: 5px;
+}
+footer>ul>li>ul>li:hover {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: var(--var-color-font);
+}footer>ul>li>ul>li:hover>a {
+    color: var(--var-color-primary);
+}

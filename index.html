@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <title>Secrétin Morgan</title>
 </head>
-<body onload="toogleShowHide()">
+<body onload="toogleShowHide(); detailsProjetAll()">
     <script src="js/script.js"></script>
 
     <header id="head">
@@ -154,7 +154,8 @@
             <div>
                 <h2>Jeux d'échecs Rogue-Like</h2>
                 <img src="img/Projet1.JPG" alt="">
-                <p>En septembre, nous avons eu un mini projet agile de programmation en java. 
+                <br><button onclick="detailsProjet('plus1')">Détails</button>
+                <p id="plus1">En septembre, nous avons eu un mini projet agile de programmation en java. 
                     Par équipe de 6, nous devions programmer un jeu. 
                     De compétences et expériences différentes, nous nous sommes tirés vers le haut. 
                     J’ai pu aider mes camarades car certains n'avaient jamais programmé en java. 
@@ -167,7 +168,10 @@
             <div>
                 <h2>Use Heat</h2>
                 <img src="img/Projet2.JPG" alt="">
-                <p>En projet de 1er année, nous avons par équipe de 2 créés un site web sur une entreprise fictive de notre création.
+                <br><button onclick="detailsProjet('plus2')">Détails</button>
+                <p id="plus2">
+                    <a href="res/Use Heat/index.html" target="_blank">Voir Use heat</a>
+                    <br>En projet de 1er année, nous avons par équipe de 2 créés un site web sur une entreprise fictive de notre création.
                     Mon camarade avais de bien meilleur compétence que moi en html, css et javaScript.
                     Néanmoins, nous nous sommes trés bien répartie le travail.
                     J'ai donc pu apprendre sur le taf l'utilisation de ces languages web.
@@ -184,7 +188,8 @@
             <div class="d1">
                 <h2>SMM: Safe Money Manager</h2>
                 <img src="img/Projet3.JPG" alt="">
-                <p>C'est un de mes projets personnels les plus ambitieux.
+                <br><button onclick="detailsProjet('plus3')">Détails</button>
+                <p id="plus3">C'est un de mes projets personnels les plus ambitieux.
                     J'ai pour objectif de créé un gestionnaire de compte.
                     J'y ai passer beaucoup d'heure en python pour arriver à un résultat bien avancer.
                     Seuleument, j'ai beaucoup trop appris sur la programmation ce qui ma obligé à recommencer ce code plusieurs fois.
@@ -197,7 +202,8 @@
             <div class="d1">
                 <h2>PCDD</h2>
                 <img src="img/Projet4.JPG" alt="">
-                <p>PCDD est un logiciel de cryptage de mot de passe.
+                <br><button onclick="detailsProjet('plus4')">Détails</button>
+                <p id="plus4">PCDD est un logiciel de cryptage de mot de passe en Python.
                     Je l'ai créé en 1ére au lycée lorsque j'ai découvert une méthode de cryptage.
                     Je voulais faire par moi même ce logiciel afin de profiter de son utilisation.
                     Il est fini et fonctionnel. Un jour, je pourrai peut être créé une version en JavaFX.
@@ -209,14 +215,32 @@
             <div class="d1">
                 <h2>Escape Game Passengers</h2>
                 <img src="img/Projet5.JPG" alt="">
-                <a href="https://view.genial.ly/627bc2a76c53040011928c4f/interactive-content-passengers" style="color: red;font-size: 20px;"></a>
-                <p>Ce projet est un escape game réalisé en Génially.
+                <br><button onclick="detailsProjet('plus5')">Détails</button>
+                <p id="plus5">
+                    <a href="https://view.genial.ly/627bc2a76c53040011928c4f/interactive-content-passengers" target="_blank">Accès Genially</a>
+                    <br>Ce projet est un escape game réalisé en Genially.
                     J'étais dans une équipe de 3.
                     Nous avons principalement appris la gestion de projet.
                     J'y ai découvert des outils comme Trello pour gérer un projet et TeamGantt pour créer un diagramme de Gantt.
                     C'était très satisfaisant de travailler sur ce projet. 
                     D'autant plus que le but final été de le faire tester aux différents groupes de la promo.
                     Je me suis donc investie de bon coeur et je suis assez fier de notre travail.
+                </p>
+            </div>
+
+            <div class="d1">
+                <h2>Application de Tutorat</h2>
+                <img src="img/Projet6.jpg" alt="">
+                <br><button onclick="detailsProjet('plus6')">Détails</button>
+                <p id="plus6">
+                    <a href="https://youtu.be/mbyExsb27oA" target="_blank">Vidéo du projet</a>
+                    <br>Cette application permet de lier un tuteur et un tutoré.
+                    Il y avais diverse condition à respecter et plusieurs fonctions à implementer.
+                    Durant ce projet, j'ai pu pousser mes connaissances en Java.
+                    J'ai ainsi utilisé des outils tels que JavaFX pour l'interface, les Graphes pour réalisés les calculs,
+                    BufferedWriter, BufferedReader et Gson pour les sauvegardes.
+                    Nous avons pu développer nos connaissances et nos capacités.
+                    A la fin, nous avons rendu un projet fonctionnel et complet.
                 </p>
             </div>
         </div>

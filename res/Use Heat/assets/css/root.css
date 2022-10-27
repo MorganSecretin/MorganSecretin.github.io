@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+:root{
+    --var-color-primary: rgb(0, 0, 0);
+    --var-color-secondary: rgb(90, 90, 90);
+    --var-color-tertiary: rgb(82, 14, 14);
+    --var-color-font: rgb(255, 255, 255);
+    --var-color-shadow: 6px 6px 12px #111;
+}
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--var-color-font);
+    background-color: #dc4a13
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+    color: var(--var-color-font);
+}

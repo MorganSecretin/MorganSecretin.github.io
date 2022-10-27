@@ -290,6 +290,26 @@ img {
     width: 80%;
 }
 
+#projets>div>div>button {
+    color: white;
+    font-family: sans-serif;
+    background: var(--var-color-secondary);
+    border: 0;
+    font-size: 150%;
+    box-shadow: 0px 5px 0px 0px #00E6F6;
+}
+
+#projets>div>div>button:hover {
+    font-size: 160%;
+}
+
+#projets>div>div>p>a {
+    color: white;
+}
+
+#projets>div>div>p>a:hover {
+    font-size: 110%;
+}
 
 /* Footer */
 

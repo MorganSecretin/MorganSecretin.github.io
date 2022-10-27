@@ -1,0 +1,78 @@
+header {
+    top: 0px;
+}
+main {
+    margin-top: 130px;
+}
+.sec-0{
+
+    width: 100%;
+    height: 180px;
+    background: url(../img/fond.png);
+    border-bottom: 2px black solid;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+/**/
+.sec-0>input {
+    border: none ;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+    width: 300px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+}
+/**/
+
+.promo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#filtre{
+    display: none;
+}
+
+#sec-0>i:hover + #filtre{
+    width: 210px;
+    display: block;
+    height: 180px;
+}
+
+/*-----------------------------------------------*/
+
+#sec-1{
+    width: 100%;
+    background: url(../img/fond.png);
+    border-bottom: 2px black solid;
+    padding: 10px;
+}
+
+#sec-1>h1{
+    margin: 0;
+}
+
+#sec-1>div{
+    background: none;
+    border: none;
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#sec-1>div>div{
+    margin: 100px;
+    width: 600px;
+    height: 500px;
+    background-color: var(--var-color-secondary);
+    border: 2px black solid;
+    border-radius: 5%;
+    /*margin: Haut Droite Bas Gauche;*/
+    /*margin: Verticale Horizontale;*/
+    box-shadow: var(--var-color-shadow);
+    font-size: 20px;
+}
