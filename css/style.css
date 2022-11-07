@@ -79,7 +79,7 @@ svg {
 
 svg text {
     text-transform: uppercase;
-    animation: stroke 4s infinite alternate;
+    /*animation: stroke 4s infinite alternate;*/
     stroke-width: 2;
     stroke: #365fa0;
     font-size: 130px;
