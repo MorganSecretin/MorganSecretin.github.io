@@ -73,8 +73,6 @@ header>nav>a:hover {
 
 svg {
     font-family: 'Russo One', sans-serif;
-    float: right;
-    position: absolute;
     width: 50%; height: 40%;
 }
 
@@ -114,7 +112,7 @@ section, footer {
 }
 
 #s0 {
-    background-image: url("../img/fondNum1.jpg");
+    background-image: url("../img/fondNum1.avif");
     background-attachment: fixed;
     background-size: 100% 100vh;
     min-height: 100vh;
@@ -125,14 +123,14 @@ section, footer {
 }
 
 #listes {
-    background-image: url("../img/fondCarb1.jpg");
+    background-image: url("../img/fondCarb1.avif");
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
 }
 
 #projets {
-    background-image: url("../img/fondForet1.jpg");
+    background-image: url("../img/fondForet1.avif");
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
@@ -169,10 +167,6 @@ section, footer {
     vertical-align: top;
 }
 
-#qualites>ul>h2 {
-    margin: 5px;
-}
-
 li {
     list-style-image: url("../img/carre.svg");
 }
@@ -181,6 +175,10 @@ p {
     font-size: 25px;
     line-height: 1.6;
     text-align: justify;
+}
+
+#tableaux {
+    padding-bottom: 20px;
 }
 
 #tableaux>div {
@@ -303,15 +301,14 @@ img {
 /* Footer */
 
 #contacter>ul>li {
-    display: flex;
-    align-items: baseline;
+    list-style: none;
     font-size: 25px;
+    text-align: center;
 }
 
 #contacter>ul>li>h5 {
-    /* haut droite bas gauche*/
-    margin: 0 2% 2% 20%;
     font-size: 30px;
+    margin-bottom: 5px;
 }
 
 .liencontact>a {
