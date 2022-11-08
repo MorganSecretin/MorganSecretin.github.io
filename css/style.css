@@ -1,5 +1,6 @@
 /* root */
 :root {
+    --var-color-primary: #293542;
     --var-color-secondary: linear-gradient(to bottom, #973daa, #8b3cb2, #7c3db9, #683fc1, #4d41c9);
 }
 
@@ -21,8 +22,9 @@ html {
 
 /* HEADER */
 
-body>a {
+#remonter {
     position: fixed;
+    z-index: 1;
     right: 0px;
     bottom: 0px;
     background-color: grey;
@@ -36,39 +38,24 @@ body>a {
 }
 
 header {
-    font-size: 30px;
+    background-color: var(--var-color-primary);
     font-family: 'Russo One', sans-serif;
-    height: min-content;
-}
-
-h1 {
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    height: 30px;
-}
-
-header>nav>a {
-    color: #444444;
-    background-image: url("../img/fondNum1.jpg");
-    background-size: 100%;
-    background-attachment: fixed;
+    position: fixed;
+    z-index: 1;
     width: 100%;
-    height: 150%;
+    border-bottom: 2px solid grey;
+}
+
+header>a {
+    font-size: 30px;
+    color: white;
     text-decoration: none;
     text-align: center;
-    filter: brightness(95%);
+    margin-left: 5px;
 }
 
-.right {
-    border-right: 1px solid grey;
-}
-
-header>nav>a:hover {
-    filter: brightness(70%);
-    font-size: 110%;
+header>a:hover {
+    background-color: #526981;
 }
 
 svg {
@@ -99,13 +86,9 @@ svg text {
 
 /* SECTIONS */
 
-section>h1 ,footer>h1{
-    font-size: 56px;
-    font-family: sans-serif;
-}
-
 section, footer {
     padding: 5px;
+    padding-top: 25px;
     border-bottom: solid;
     font-family: sans-serif;
     border-bottom: grey;
@@ -132,12 +115,16 @@ section, footer {
     z-index: 0;
     padding-bottom: 100px;
     box-shadow: black 0px 5px 25px 0px;
-    background-color: #293542;
+    background-color: var(--var-color-primary);
     color: white;
 }
 
 #apropos {
     padding-inline: 20%;
+}
+
+#apropos>h1 {
+    text-align: center;
 }
 
 #apropos>img {
@@ -151,10 +138,10 @@ section, footer {
 }
 
 #listes>ul {
-    background-image: var(--var-color-secondary);
+    background-color: grey;
     min-width: min-content;
     max-width: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--var-color-primary);
     border-radius: 10px;
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
     margin-left: 5%;
@@ -206,9 +193,16 @@ table {
     background-color: #E3E3E3;
 }
 
+#projets {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
 #projets>h1 {
     color: white;
     text-shadow: 3px 3px 4px black;
+    text-align: center;
+    font-size: 50px;
 }
 
 #projets>div>div {
@@ -219,24 +213,6 @@ table {
     background-color: grey;
     text-align: center;
     box-shadow: 3px 3px 4px black;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.titreprojet {
-    grid-column: 1 / 3;
-    grid-row: 1;
-}
-
-.imgprojet {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-}
-
-.textprojet {
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
 }
 
 #projets>div>div>p {
@@ -287,6 +263,13 @@ img {
 
 #projets>div>div>img {
     width: 80%;
+    transition: 1s;
+}
+
+#projets>div>div>img:hover {
+    width: 100%;
+    transition: 1s;
+    transition-delay: 2s;
 }
 
 #projets>div>div>button {
@@ -295,11 +278,12 @@ img {
     background: var(--var-color-secondary);
     border: 0;
     font-size: 200%;
-    box-shadow: 0px 5px 0px 0px #00E6F6;
+    box-shadow: 0px 5px 0px 0px hsl(214, 100%, 60%);
+    transition: 0.5s;
 }
 
 #projets>div>div>button:hover {
-    font-size: 160%;
+    box-shadow: 0px 5px 0px 0px rgb(46, 255, 46);
 }
 
 #projets>div>div>p>a {
@@ -311,6 +295,11 @@ img {
 }
 
 /* Footer */
+
+#contacter>h1 {
+    text-align: center;
+    font-size: 50px;
+}
 
 #contacter>ul>li {
     list-style: none;

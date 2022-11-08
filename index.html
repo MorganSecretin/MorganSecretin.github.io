@@ -12,14 +12,14 @@
     <script src="js/script.js"></script>
 
     <header id="head">
-        <nav class="onglets">
-            <a class="right" href='#apropos'>A propos de moi</a>
-            <a class="right" href='#projets'>Mes Projets</a>
-            <a href="#contacter">Me contacter</a>
-        </nav>
+        <a href='#apropos'>A propos</a>
+        <a href="#listes">Compétences</a>
+        <a href="#tableaux">Formations</a>
+        <a href='#projets'>Projets</a>
+        <a href="#contacter">Contact</a>
     </header>
 
-    <a href="#head"><img src="img/avant.png" href="#head" style="width: 40px; height: 40px;" alt=""></a>
+    <a id="remonter" href="#s0"><img src="img/avant.png" style="width: 40px; height: 40px;" alt=""></a>
 
     <section id="s0">
         <img src="img/Photo.webp" style="width: 371px; height: 500px;margin-top: 50px;" alt="">
@@ -154,11 +154,11 @@
         <h1>Mes projets</h1>
         <div>
             <div>
-                <h2 class="titreprojet">CHESSCAPE</h2>
-                <img class="imgprojet" src="img/Projet1.JPG" alt="">
-                <br><button class="textprojet" onclick="detailsProjet('plus1')">Détails</button>
-                <p class="textprojet">C'est un jeux d'échecs type rogue-like en projet agile avec de la programmation en java.</p>
-                <p class="textprojet" id="plus1">
+                <h2>CHESSCAPE</h2>
+                <img src="img/Projet1.png" alt="">
+                <br><button onclick="detailsProjet('plus1')">Détails</button>
+                <p>C'est un jeux d'échecs type rogue-like en projet agile avec de la programmation en java.</p>
+                <p id="plus1">
                     Par équipe de 6, nous devions programmer ce jeu en 3 jours.
                     De compétences et expériences différentes, nous nous sommes tirés vers le haut. 
                     J’ai pu aider mes camarades car certains n'avaient jamais programmé en java. 
@@ -169,11 +169,11 @@
             </div>
 
             <div>
-                <h2 class="titreprojet">Application de Tutorat</h2>
-                <img class="imgprojet" src="img/Projet6.jpg" alt="">
-                <br><button class="textprojet" onclick="detailsProjet('plus6')">Détails</button>
-                <p class="textprojet">Cette application permet de lier un tuteur et un tutoré.</p>
-                <p class="textprojet" id="plus6">
+                <h2>Application de Tutorat</h2>
+                <img src="img/Projet6.jpg" alt="">
+                <br><button onclick="detailsProjet('plus6')">Détails</button>
+                <p>Cette application permet de lier un tuteur et un tutoré.</p>
+                <p id="plus6">
                     <a href="https://youtu.be/mbyExsb27oA" target="_blank">Vidéo du projet</a>
                     <br>Il y avais diverse condition à respecter et plusieurs fonctions à implementer.
                     Durant ce projet, j'ai pu pousser mes connaissances en Java.
@@ -189,11 +189,11 @@
 
         <div>
             <div class="d1">
-                <h2 class="titreprojet">SMM: Safe Money Manager</h2>
-                <img class="imgprojet" src="img/Projet3.JPG" alt="">
-                <br><button class="textprojet" onclick="detailsProjet('plus3')">Détails</button>
-                <p class="textprojet">J'ai pour objectif de créé un gestionnaire de compte.</p>
-                <p class="textprojet" id="plus3">C'est un de mes projets personnels les plus ambitieux.
+                <h2>SMM: Safe Money Manager</h2>
+                <img src="img/Projet3.JPG" alt="">
+                <br><button onclick="detailsProjet('plus3')">Détails</button>
+                <p>J'ai pour objectif de créé un gestionnaire de compte.</p>
+                <p id="plus3">C'est un de mes projets personnels les plus ambitieux.
                     J'y ai passer beaucoup d'heure en python pour arriver à un résultat bien avancer.
                     Seuleument, j'ai beaucoup trop appris sur la programmation ce qui ma obligé à recommencer ce code plusieurs fois.
                     Au final, j'ai décidé de le passer dans une version java avec la bibliothéque JavaFX.
@@ -203,11 +203,11 @@
             </div>
         
             <div class="d1">
-                <h2 class="titreprojet">PCDD</h2>
-                <img class="imgprojet" src="img/Projet4.JPG" alt="">
-                <br><button class="textprojet" onclick="detailsProjet('plus4')">Détails</button>
-                <p class="textprojet">PCDD est un logiciel de cryptage de mot de passe en Python.</p>
-                <p class="textprojet" id="plus4">Je l'ai créé en 1ére au lycée lorsque j'ai découvert une méthode de cryptage.
+                <h2>PCDD</h2>
+                <img src="img/Projet4.JPG" alt="">
+                <br><button onclick="detailsProjet('plus4')">Détails</button>
+                <p>PCDD est un logiciel de cryptage de mot de passe en Python.</p>
+                <p id="plus4">Je l'ai créé en 1ére au lycée lorsque j'ai découvert une méthode de cryptage.
                     Je voulais faire par moi même ce logiciel afin de profiter de son utilisation.
                     Il est fini et fonctionnel. Un jour, je pourrai peut être créé une version en JavaFX.
                 </p>
@@ -216,11 +216,11 @@
 
         <div>
             <div class="d1">
-                <h2 class="titreprojet">Escape Game Passengers</h2>
-                <img class="imgprojet" src="img/Projet5.JPG" alt="">
-                <br><button class="textprojet" onclick="detailsProjet('plus5')">Détails</button>
-                <p class="textprojet">Ce projet est un escape game réalisé en Genially.</p>
-                <p class="textprojet" id="plus5">
+                <h2>Escape Game Passengers</h2>
+                <img src="img/Projet5.JPG" alt="">
+                <br><button onclick="detailsProjet('plus5')">Détails</button>
+                <p>Ce projet est un escape game réalisé en Genially.</p>
+                <p id="plus5">
                     <a href="https://view.genial.ly/627bc2a76c53040011928c4f/interactive-content-passengers" target="_blank">Accès Genially</a>
                     <br>J'étais dans une équipe de 3.
                     Nous avons principalement appris la gestion de projet.
@@ -232,11 +232,11 @@
             </div>
 
            <div class="d1">
-                <h2 class="titreprojet">Use Heat</h2>
-                <img class="imgprojet" src="img/Projet2.JPG" alt="">
-                <br><button class="textprojet" onclick="detailsProjet('plus2')">Détails</button>
-                <p class="textprojet">En projet de 1er année, nous avons par équipe de 2 créés un site web.</p>
-                <p class="textprojet" id="plus2">
+                <h2>Use Heat</h2>
+                <img src="img/Projet2.JPG" alt="">
+                <br><button onclick="detailsProjet('plus2')">Détails</button>
+                <p>En projet de 1er année, nous avons par équipe de 2 créés un site web.</p>
+                <p id="plus2">
                     <a href="res/Use Heat/indexBis.html" target="_blank">Voir Use heat</a>
                     <br>Le site se base sur une entreprise fictive de notre création.
                     Mon camarade avais de bien meilleur compétence que moi en html, css et javaScript.
