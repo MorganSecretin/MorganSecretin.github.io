@@ -12,17 +12,18 @@
     <script src="js/script.js"></script>
 
     <header id="head">
+        <a href="#s0">Accueil</a>
         <a href='#apropos'>A propos</a>
         <a href="#listes">Compétences</a>
-        <a href="#tableaux">Formations</a>
+        <a href="#parcour">Parcour</a>
         <a href='#projets'>Projets</a>
         <a href="#contacter">Contact</a>
     </header>
 
-    <a id="remonter" href="#s0"><img src="img/avant.png" style="width: 40px; height: 40px;" alt=""></a>
+    <a id="remonter" href="#s0"><img src="img/avant.png" style="width: 40px; height: 40px;" alt="/\"></a>
 
     <section id="s0">
-        <img src="img/Photo.webp" style="width: 371px; height: 500px;margin-top: 50px;" alt="">
+        <img src="img/Photo.webp" style="width: 371px; height: 500px;margin-top: 50px;" alt="Pas de Morgan ?">
         <svg viewBox="0 0 1320 300">
             <text x="50%" y="50%" dy=".35em" text-anchor="middle">
                 SECRETIN MORGAN
@@ -80,90 +81,67 @@
         </ul>
     </section>
 
-    <section id="tableaux">
-        <div>
-        <h2>Formations</h2>
-        <table>
-            <tr class="entete">
-                <td><strong>Nom</strong></td>
-                <td><strong>Etablissement</strong></td>
-                <td><strong>Période</strong></td>
-                <td><strong>Description</strong></td>
-            </tr>
 
-            <tr class="lig">
-                <td>Brevet</td>
-                <td>Collège Sacré-coeur de Tourcoing</td>
-                <td>2014-2018</td>
-                <td>Mension très bien.</td>
-            </tr>
-
-            <tr class="ligbis">
-                <td>Baccalauréat général</td>
-                <td>Lycée Sacré-coeur de Tourcoing</td>
-                <td>2018-2021</td>
-                <td>Mention bien. Spécialités: Mathématiques et NSI. Option: Math experte.</td>
-            </tr>
-
-            <tr class="lig">
-                <td>En cours: BUT informatique</td>
-                <td>IUT Lille</td>
-                <td>2021-2024</td>
-                <td>En 2éme année.</td>
-            </tr>
-        </table>
-        </div>
-
-        <div>
-        <h2>Expériences</h2>
-        <table>
-            <tr class="entete">
-                <td><strong>Type</strong></td>
-                <td><strong>Profession</strong></td>
-                <td><strong>Entreprise</strong></td>
-                <td><strong>Période</strong></td>
-                <td><strong>Description</strong></td>
-            </tr>
-
-            <tr class="lig">
-                <td>Stage</td>
-                <td>Directeur commercial</td>
-                <td>IMC J+R</td>
-                <td>1 semaine - 2018</td>
-                <td>Découverte du travail en petite
-                    entreprise et du métier de directeur
-                    commercial. Beaucoup de contact
-                    avec les clients.</td>
-            </tr>
-            
-            <tr class="ligbis">
-                <td>Stage</td>
-                <td>Multiple</td>
-                <td>Renault</td>
-                <td>1 semaine - 2019</td>
-                <td>Découverte du travail en grande
-                    entreprise ainsi que des multiples
-                    possibilités d’emplois existant.</td>
-            </tr>
-        </table>
-        </div>
-    </section>
-
-
-    <section>
-        <ul>
+    <section id="parcour">
+        <div class="ligneblanche"></div>
+        <h1>MON PARCOUR</h1>
+        <ul id="timeline">
             <li>
-                <div class="timeline-badge"><img src="img/fondBureau.jpg" alt=""> </div>
+                <img class="timeline-badge" src="img/LogoIUTLille.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>IUT de Lille</h3>
+                        <h2>BUT informatique</h2>
+                        <p class="date"><img src="img/clock-fill.svg">2021 - 2024</p>
+                        <p>Je fais ce BUT pour devenir programmeur mais après une poursuite d'études.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <img class="timeline-badge" src="img/LogoSacreCoeur.png" alt="">
                 <div class="timeline-panel-container">
                     <div class="timeline-panel">
-                        <div class="timeline-heading">
-                            <h3>udemy</h3>
-                            <h4>Apprendre Symfony 5</h4>
-                            <p class="text-muted"><span class="bi bi-clock-fill"></span> 2021</p>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Cette formation en ligne me permet d'apprendre à programmer un site avec l'utilisation du framework Symfony.</p>
-                        </div>
+                        <h3>Lycée Sacré-coeur de Tourcoing</h3>
+                        <h2>Baccalauréat général</h2>
+                        <p class="date"><img src="img/clock-fill.svg">2018 - 2021</p>
+                        <p>Mention bien. <br>Spécialités: Mathématiques et NSI. <br>Option: Math experte.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <img class="timeline-badge" src="img/LogoSacreCoeur.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>Collège Sacré-coeur de Tourcoing</h3>
+                        <h2>Brevet des collèges</h2>
+                        <p class="date"><img src="img/clock-fill.svg">2014 - 2018</p>
+                        <p>Mension très bien.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <img class="timeline-badge" src="img/LogoRenault.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>Renault</h3>
+                        <h2>Stage sur site de R&D</h2>
+                        <p class="date"><img src="img/clock-fill.svg">1 semaine - 2019</p>
+                        <p>J'ai découverte le travail en grande entreprise ainsi que les multiples possibilités d’emplois existant.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <img class="timeline-badge" src="img/LogoIMC.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>IMC J+R</h3>
+                        <h2>Stage de directeur commercial</h2>
+                        <p class="date"><img src="img/clock-fill.svg">1 semaine - 2018</p>
+                        <p>J'ai découverte le travail en petite entreprise et le métier de directeur commercial. J'ai eu beaucoup de contact avec les clients.</p>
                     </div>
                 </div>
             </li>
