@@ -36,3 +36,40 @@ function detailsProjet(id) {
     // Affiche ou Cache les projets
     detail.hidden = !detail.hidden;
 }
+
+function toogleHeader() {
+    let link = document.getElementsByClassName("headlink");
+
+    // Affiche ou Cache les liens des sections
+    for (var a of link){
+        if(a.style.display == "inline-block" || a.style.display == "block"){
+            a.style.display = "none";
+        }
+        else if(window.innerWidth < 750){
+            a.style.display = "block";
+        }
+        else{
+            a.style.display = "inline-block";
+        }
+    }
+}
+
+window.onresize = resize;
+function resize() {
+    if(window.innerWidth < 750){
+        document.getElementById("toggleheader").style.display = "inline-block";
+        let link = document.getElementsByClassName("headlink");
+
+        for (var a of link){
+            a.style.display = "none";
+        }
+    }
+    else{
+        document.getElementById("toggleheader").style.display = "none";
+        let link = document.getElementsByClassName("headlink");
+
+        for (var a of link){
+            a.style.display = "inline-block";
+        }
+    }
+}
