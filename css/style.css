@@ -1,7 +1,7 @@
 /* root */
 :root {
     --var-color-primary: #293542;
-    --var-color-secondary: linear-gradient(to bottom, #973daa, #8b3cb2, #7c3db9, #683fc1, #4d41c9);
+    --var-color-secondary: #B4C2CE;
 }
 
 /* HTML et BODY */
@@ -29,6 +29,14 @@ img {
     height: 2px;
     background: white;
     margin: 20px auto;
+}
+
+section, footer {
+    padding: 5px;
+    padding-top: 25px;
+    border-bottom: solid;
+    font-family: sans-serif;
+    border-bottom: grey;
 }
 
 /* HEADER */
@@ -64,6 +72,7 @@ header>a {
     text-decoration: none;
     text-align: center;
     margin-left: 5px;
+    height: 60px;
 }
 
 header>a:hover {
@@ -93,6 +102,32 @@ header>a:hover {
     }
 }
 
+/*Accueil*/
+#accueil {
+    background-image: url("../img/fondNum1.avif");
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    min-height: 100vh;
+}
+
+#accueil>img {
+    border-bottom: 6px black solid ;
+}
+
+@media (max-width: 757px) {
+    #accueil {
+        padding-top: 80px;
+    }
+
+    #accueil>svg {
+        width: 100%; height: 50%;
+    }
+
+    #accueil>svg>text {
+        font-size: 120px;;
+    }
+}
+
 svg {
     font-family: 'Russo One', sans-serif;
     width: 50%; height: 40%;
@@ -119,47 +154,13 @@ svg text {
     }
 }
 
-/* SECTIONS */
-
-section, footer {
-    padding: 5px;
-    padding-top: 25px;
-    border-bottom: solid;
-    font-family: sans-serif;
-    border-bottom: grey;
-}
-
-#s0 {
-    background-image: url("../img/fondNum1.avif");
-    background-attachment: fixed;
-    background-size: 100% 100vh;
-    min-height: 100vh;
-}
-
-#s0>img {
-    border-bottom: 6px black solid ;
-}
-
-@media (max-width: 757px) {
-    #s0 {
-        padding-top: 80px;
-    }
-
-    #s0>svg {
-        width: 100%; height: 50%;
-    }
-
-    #s0>svg>text {
-        font-size: 120px;;
-    }
-}
-
+/*SECTION*/
 #listes, #projets{
     background-color: #eaf4fb;
     background-size: 100%;
 }
 
-#apropos, #contacter, #tableaux {
+#apropos, #contacter, #tableaux, #competences {
     position: relative;
     z-index: 0;
     padding-bottom: 100px;
@@ -168,6 +169,7 @@ section, footer {
     color: white;
 }
 
+/*A propos*/
 #apropos {
     padding-inline: 20%;
 }
@@ -187,6 +189,7 @@ section, footer {
     color: white;
 }
 
+/*Listes*/
 #listes>ul {
     background-color: grey;
     min-width: min-content;
@@ -209,9 +212,26 @@ p {
     text-align: justify;
 }
 
-/*Formation*/
+/*Compétences*/
+#competences {
+    text-align: center;
+}
+
+.competence {
+    color: black;
+    display: inline-block;
+    border: 2px black;
+    width: 250px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    /*H D B G*/
+    margin: 0px 15px 0px 15px;
+}
+
+/*Parcours*/
 #parcour {
-    background-color:#B4C2CE ;
+    background-color: var(--var-color-secondary);
 }
 
 #parcour>h1 {
@@ -489,9 +509,11 @@ p {
 }
 
 /* Footer */
+#contacter {
+    text-align: center;
+}
 
 #contacter>h1 {
-    text-align: center;
     font-size: 50px;
 }
 
