@@ -264,8 +264,8 @@ svg text {
 
 @media (max-width: 700px) {
     .competence {
-        min-height: 260px;
-        max-height: 260px;
+        min-height: 290px;
+        max-height: 290px;
     }
 }
 
@@ -566,6 +566,20 @@ svg text {
 #contacter>ul>li>h5 {
     font-size: 30px;
     margin-bottom: 5px;
+}
+
+@media (max-width:750px){
+    #contacter>h1 {
+        font-size: 40px;
+    }
+     
+    #contacter>ul>li {
+    	font-size: 20px;
+    }
+    
+    #contacter>ul>li>h5 {
+    	font-size: 20px;
+	}
 }
 
 .liencontact>a {
