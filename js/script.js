@@ -1,8 +1,10 @@
-function toogleShowHide() {
-    // Objets
+
+// Affiche ou cache les projets et un des boutons (plus/moins)
+function toggleProjects() {
     let d = document.getElementsByClassName("d1");
     var show = document.getElementById("showprojets");
-    var hide = document.getElementById("hideprojets");
+    var hide1 = document.getElementById("hideprojets1");
+    var hide2 = document.getElementById("hideprojets2");
 
     // Affiche ou Cache les projets
     for (var div of d ){
@@ -10,37 +12,56 @@ function toogleShowHide() {
     }
 
     // Affiche soit plus soit moins
-    if(hide.style.display != "none"){
-        hide.style.display = "none";
+    if(hide1.style.display != "none"){
+        hide1.style.display = "none";
+        hide2.style.display = "none";
         show.style.display = "block";
     }
     else {
-        hide.style.display = "block";
+        hide1.style.display = "block";
+        hide2.style.display = "block";
         show.style.display = "none";
     }
 }
 
-function detailsProjetAll() {
-    document.getElementById("plus1").hidden = true;
-    document.getElementById("plus2").hidden = true;
-    document.getElementById("plus3").hidden = true;
-    document.getElementById("plus4").hidden = true;
-    document.getElementById("plus5").hidden = true;
-    document.getElementById("plus6").hidden = true;
+// Affiche ou cache la totalité des détails pour les projets
+function toggleDetailsProjetAll() {
+    // L'inverse de la situation présente (affiché/caché)
+    var show =  Boolean(!document.getElementById("plus1").hidden);
+
+    document.getElementById("plus1").hidden = show;
+    document.getElementById("plus2").hidden = show;
+    document.getElementById("plus3").hidden = show;
+    document.getElementById("plus4").hidden = show;
+    document.getElementById("plus5").hidden = show;
+    document.getElementById("plus6").hidden = show;
 }
 
-function detailsProjet(id) {
-    // Objets
-    let detail = document.getElementById(id);
+// Affiche ou cache la totalité des détails pour les projets selon la situation présente
+function setHideDetailsProjetAll(boolean) {
+    if(document.getElementById("plus1").hidden != boolean){
+        toggleDetailsProjetAll();
+    }
+}
 
-    // Affiche ou Cache les projets
+// Affiche ou cache selon l'id fournie le détail d'un projet
+function detailsProjet(id) {
+    let detail = document.getElementById(id);
     detail.hidden = !detail.hidden;
 }
 
-function toogleHeader() {
+// Affiche ou Cache les liens de la navBar
+function toggleHeader() {
+    if (document.getElementById("toggleheader_img").getAttribute("src") == "img/OpenMenuBar.png") {
+
+        document.getElementById("toggleheader_img").src = "img/CloseMenuBar.png";
+
+    } else {
+        document.getElementById("toggleheader_img").src = "img/OpenMenuBar.png";
+    }
+
     let link = document.getElementsByClassName("headlink");
 
-    // Affiche ou Cache les liens des sections
     for (var a of link){
         if(a.style.display == "inline-block" || a.style.display == "block"){
             a.style.display = "none";
@@ -54,9 +75,12 @@ function toogleHeader() {
     }
 }
 
-window.onresize = resize;
-function resize() {
-    if(window.innerWidth < 750){
+// Changement de taille de l'écran
+window.onresize = doOnResize;
+
+function doOnResize() {
+    // Element lien de la navBar et bouton navBar
+    if(window.innerWidth <= 750){
         document.getElementById("toggleheader").style.display = "inline-block";
         let link = document.getElementsByClassName("headlink");
 
@@ -72,4 +96,24 @@ function resize() {
             a.style.display = "inline-block";
         }
     }
+
+    let boutonsDetails = document.getElementsByClassName("boutondetail");
+
+    // Cache les boutons détails et Affiche les details
+    if(window.innerWidth >= 1000){
+        setHideDetailsProjetAll(false);
+
+        for (var bouton of boutonsDetails){
+            bouton.hidden = true;
+        }
+    }
+    // Affiche les boutons détails et Cache les details
+    else{
+        setHideDetailsProjetAll(true);
+
+        for (var bouton of boutonsDetails){
+            bouton.hidden = false;
+        }
+    }
 }
+
