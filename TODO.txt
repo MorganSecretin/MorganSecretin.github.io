@@ -1,7 +1,0 @@
-- Ajouter une souris animé sur la section accueil
-
-- Une date avec la dernière mise à jour
-
-- Les compétences hover avec texte caché (idée : logo change couleur = div image fond couleur
-
-- Créé un logo MS pour mon site

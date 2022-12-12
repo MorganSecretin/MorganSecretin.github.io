@@ -38,10 +38,11 @@ p {
 }
 
 .ligneblanche {
-    width: 100px;
-    height: 2px;
-    background: var(--var-color-tertiary);
-    margin: 20px auto;
+    width: 100px !important;
+    height: 2px !important;
+    background: var(--var-color-tertiary) !important;
+    margin: 20px auto !important;
+    
 }
 
 section, footer {
@@ -102,6 +103,12 @@ header>a:hover {
     }
 }
 
+@media (max-width:900px) {
+	#head>a {
+        font-size: 20px;
+    }
+}
+
 @media (max-width:750px) {
     #head>button {
         background: none;
@@ -126,7 +133,7 @@ header>a:hover {
     border-bottom: 6px black solid ;
 }
 
-@media (max-width: 757px) {
+@media (max-width: 750px) {
     #accueil {
         padding-top: 80px;
     }
@@ -164,6 +171,15 @@ svg text {
       fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0); 
       stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
     }
+}
+
+#mousescroll {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+	width: 4.5em;
+	border: none !important;
 }
 
 /*SECTION*/
@@ -523,7 +539,6 @@ svg text {
     }
 
     .projets_div_texte>p {
-
         font-size: 1.5em;
     }
 
@@ -532,12 +547,25 @@ svg text {
     }
 }
 
+
+@media (min-width: 1200px){
+	.projets_div_texte {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1199px){
+	.projets_div_texte {
+		font-size: 14px;
+	}
+}
+
 @media (max-width: 999px){
     #projets>h1 {
         font-size: 50px;
     }
 
-    #projets>div {
+    .projets_div {
         margin: 10px;
         padding: 10px;
         font-family: sans-serif;
@@ -547,19 +575,19 @@ svg text {
         box-shadow: 3px 3px 4px black;
     }
 
-    #projets>div>p {
+    .projets_div>p {
         margin-right: 8%;
     }
 
-    #projets>div>img {
+    .projets_div>img {
         width: 80%;
     }
 
-    #projets>div>p>a {
+    .projets_div>p>a {
         color: var(--var-color-tertiary);
     }
 
-    #projets>div>p>a:hover {
+    .projets_div>p>a:hover {
         font-size: 110%;
     }
 
@@ -586,7 +614,7 @@ svg text {
 
 /* Footer */
 #contacter {
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     text-align: center;
     background-color: var(--var-color-secondary);
 }
@@ -616,3 +644,11 @@ svg text {
     	font-size: 20px;
 	}
 }
+
+#datemaj {
+	margin-left: 20px;
+	margin-top: 30px;
+	text-align: left;
+	font-size: 1.3em;
+}
+
