@@ -5,8 +5,12 @@ import ToogleHeaderButton from './ToggleHeaderButton.js';
 const header = document.querySelector('body>header');
 const toogleHeaderButton = new ToogleHeaderButton(header);
 
-/* NEXT */
+fetch('./html/welcome.html')
+	.then(response => response.text())
+	.then(responseText => showFileContent(responseText, '.welcome'));
 
-//const projectListView = new ProjetListView(document.querySelector('#projets'));
+function showFileContent(html, element) {
+	document.querySelector(element).innerHTML = html;
+}
 
 console.log('Tout Fonctionne');
