@@ -1,12 +1,12 @@
-import renderProjectThumbnail from './renderProjectThumbnail.js';
-import data from './data.js';
+import renderProjectThumbnail from '../renderProjectThumbnail.js';
+import data from '../data.js';
 
-export default class ProjetListView {
+export default class ProjectsView extends View {
 	searchForm;
-	element;
 
 	constructor(element) {
-		this.element = element;
+		super(element);
+
 		this.renderProjectList();
 
 		// détection de la soumission du formulaire de recherche

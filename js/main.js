@@ -1,4 +1,4 @@
-import ProjetListView from './ProjetListView.js';
+import ProjectsView from './page/ProjectsView.js';
 import ToogleHeaderButton from './ToggleHeaderButton.js';
 
 /* INIT */
