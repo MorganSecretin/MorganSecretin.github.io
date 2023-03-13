@@ -4,34 +4,20 @@
     background-attachment: fixed;
     background-size: 100% 100vh;
     min-height: 100vh;
-    padding-top: 30px;
 }
 
 .welcome>img {
+    width: 30%;
     border-bottom: 6px black solid;
     border-radius: 20px;
 }
 
-@media (max-width: 750px) {
-    .welcome {
-        padding-top: 70px;
-    }
-
-    .welcome>svg {
-        width: 100%; height: 50%;
-    }
-
-    .welcome>svg>text {
-        font-size: 120px;
-    }
-}
-
-svg {
+.welcome svg {
     font-family: 'Russo One', sans-serif;
     width: 50%; height: 40%;
 }
 
-svg text {
+.welcome svg text {
     text-transform: uppercase;
     animation: stroke 4s infinite alternate;
     stroke-width: 2;
@@ -49,5 +35,24 @@ svg text {
     100% {
       fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0); 
       stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
+
+@media (max-width: 750px) {
+    .welcome {
+        padding-top: 70px;
+        text-align: center;
+    }
+
+    .welcome>img {
+        width: 80%;
+    }
+
+    .welcome svg {
+        width: 100%; height: 50%;
+    }
+
+    .welcome svg>text {
+        font-size: 120px;
     }
 }

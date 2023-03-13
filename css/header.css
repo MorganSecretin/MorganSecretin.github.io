@@ -3,20 +3,18 @@ body>header {
     position: fixed;
     display: flex;
     background-color: var(--var-color-tr-primary);
-    font-family: 'Russo One', sans-serif;
     width: 100%;
     height: fit-content;
     border-bottom: 2px solid grey;
     /* (H) (D) (B) (G)*/ /* (H B) (G D) */ /* (H B G D) */
     padding: 0px 20px;
     justify-content: center;
+    min-height: 10%;
 }
 
 body>header>div {
     display: flex;
-    min-height: 80px;
-    width: 1000px;
-    max-width: 1000px;
+    width: 1200px;
 }
 
 body>header .headerImg {
@@ -26,20 +24,25 @@ body>header .headerImg {
     margin-right: 50px;
 }
 
+body>header nav {
+    width: 80%;
+}
+
 body>header nav>a {
+    font-family: 'Russo One', sans-serif;
     display: inline-block;
-    font-size: 22px;
     color: var(--var-color-tertiary);
     text-decoration: none;
     padding: 20px 10px 5px 10px;
-    height: 80px;
+    height: 100%;
+    font-size: 150%;
 }
 
 body>header .navBar>a:hover {
     background-color: #526981;
 }
 
-@media (max-width:920px) {
+@media (max-width:919px) {
     .openHeader, .closeHeader, .headerImg {
         position: absolute;
     }

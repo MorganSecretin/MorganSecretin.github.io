@@ -10,3 +10,13 @@ body, html, .viewContainer{
 .hide {
 	display: none !important;
 }
+
+.viewContainer article {
+	padding-top: 8%;
+}
+
+@media (max-width: 750px) {
+	.viewContainer article {
+		padding-top: 20%;
+	}
+}
