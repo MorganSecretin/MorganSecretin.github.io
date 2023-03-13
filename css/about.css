@@ -1,0 +1,62 @@
+
+/*A propos*/
+#apropos {
+    padding-inline: 20%;
+    text-align: justify;
+    padding-top: 100px;
+}
+
+#apropos>h1 {
+    text-align: center;
+    color: var(--var-color-tertiary);
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+#apropos>img {
+    width: 60%;
+    margin-left: 20%;
+}
+
+#apropos>ul {
+    font-size: 20px;
+    background-color: grey;
+    width: fit-content;
+    border: 1px solid var(--var-color-primary);
+    border-radius: 10px;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/*Intérêts*/
+#interets {
+	background-color: var(--var-color-secondary);
+}
+
+#interets>pre {
+	background-color: var(--var-color-tertiary);
+    font-size: 25px;
+    border: 2px black solid;
+    width: fit-content;
+    padding-right: 20px;
+    margin-bottom: 0px;
+}
+
+#interets>pre>a {
+    color: black;
+    text-decoration: none;
+}
+
+@media (max-width:900px) {
+    #interets>pre {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:750px) {
+    #interets>pre {
+        font-size: 12px;
+    }
+}

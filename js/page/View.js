@@ -15,12 +15,12 @@ export default class View {
 	 * Affiche la vue en lui ajoutant la classe CSS `active`
 	 */
 	show() {
-		this.element.classList.add('hide');
+		this.element.classList.remove('hide');
 	}
 	/**
 	 * Masque la vue en enlevant la classe CSS `active`
 	 */
 	hide() {
-		this.element.classList.remove('hide');
+		this.element.classList.add('hide');
 	}
 }

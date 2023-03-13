@@ -1,5 +1,6 @@
 import renderProjectThumbnail from '../renderProjectThumbnail.js';
 import data from '../data.js';
+import View from './View.js';
 
 export default class ProjectsView extends View {
 	searchForm;
@@ -38,7 +39,7 @@ export default class ProjectsView extends View {
 			.sort(sortingFunction) // tri
 			.forEach(project => (html += renderProjectThumbnail(project))); // génération du HTML
 		// maj de la page HTML
-		this.element.querySelector('.projects').innerHTML = html;
+		this.element.innerHTML = html;
 	}
 
 	handleSearchFormSubmit(event) {
