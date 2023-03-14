@@ -26,7 +26,7 @@ export default class ToogleHeaderButton {
 	}
 
 	windowGrow() {
-		if (window.innerWidth > 919) {
+		if (window.innerWidth > 750) {
 			this.showNavBar();
 			this.closeHeader.classList.add('hide');
 		} else {

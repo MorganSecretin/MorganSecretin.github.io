@@ -42,7 +42,17 @@ body>header .navBar>a:hover {
     background-color: #526981;
 }
 
-@media (max-width:919px) {
+@media (max-width:1054px) {
+    body>header nav>a {
+        font-size: 95%;
+    }
+}
+
+@media (max-width:750px) {
+    body>header {
+        min-height: 13%;
+    }
+
     .openHeader, .closeHeader, .headerImg {
         position: absolute;
     }
@@ -66,7 +76,8 @@ body>header .navBar>a:hover {
 
     body>header nav>a {
         display: block;
-        height: 70px;
+        height: 50px;
         text-align: center;
+        font-size: 120%;
     }
 }

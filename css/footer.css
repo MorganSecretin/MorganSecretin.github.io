@@ -2,23 +2,25 @@
 body>footer {
     padding-bottom: 10px;
     text-align: center;
-    background-color: var(--var-color-secondary);
+    background-color: var(--var-color-primary);
+    border-top: 2px solid grey;
 }
 
 body>footer>h1 {
-    margin-top: 0px;
+    margin: 0px;
     text-align: center;
     color: var(--var-color-tertiary);
     font-size: 40px;
 }
 
 .contacter_div {
-    padding: 0 5% 0 5%;
+    margin: 0px 50px;
     display: inline-block;
+    height: fit-content;
 }
 
-
 body>footer>div>h5 {
+    margin: 0px;
     font-size: 30px;
     margin-bottom: 5px;
 }
@@ -34,8 +36,8 @@ body>footer>div>h5 {
 }
 
 #datemaj {
-	margin-left: 20px;
-	margin-top: 30px;
+    height: fit-content;
+	padding-left: 20px;
 	text-align: left;
 	font-size: 1.3em;
 }
