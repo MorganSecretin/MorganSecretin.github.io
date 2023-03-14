@@ -1,6 +1,5 @@
 import Router from './page/Router.js';
 import ToogleHeaderButton from './ToggleHeaderButton.js';
-
 import WelcomeView from './page/WelcomeView.js';
 import AboutView from './page/AboutView.js';
 import SkillsView from './page/SkillsView.js';
@@ -48,7 +47,6 @@ Router.routes = routes;
 Router.setMenuElement(document.querySelector('body>header nav'));
 
 // chargement de la vue initiale selon l"URL demandée par l"utilisateur.rice (Deep linking)
-Router.navigate(window.location.pathname, true);
-window.onpopstate = () => Router.navigate(document.location.pathname, true);
+Router.navigate('/welcome', true);
 
 console.log('Tout Fonctionne');

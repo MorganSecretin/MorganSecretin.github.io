@@ -32,10 +32,6 @@ export default class Router {
 
 			// on affiche la nouvelle vue
 			route.view.show();
-
-			if (!skipPushState) {
-				window.history.pushState(null, null, path);
-			}
 		}
 	}
 }
