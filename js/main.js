@@ -19,6 +19,10 @@ fetch('./html/about.html')
 	.then(response => response.text())
 	.then(responseText => showFileContent(responseText, '.about'));
 
+fetch('./html/skills.html')
+	.then(response => response.text())
+	.then(responseText => showFileContent(responseText, '.skills'));
+
 function showFileContent(html, element) {
 	document.querySelector(element).innerHTML = html;
 }

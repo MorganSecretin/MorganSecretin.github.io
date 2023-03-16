@@ -1,0 +1,39 @@
+/*Compétences*/
+.skills {
+    background-image: url("../img/Fond/fondNum4.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+.skills>h1 {
+    color: var(--var-color-tertiary);
+    font-size: 30px;
+}
+
+.skill-div {
+    color: black;
+    display: inline-block;
+    border: 2px black;
+    width: 250px;
+    min-height: 350px;
+    max-height: 350px;
+    vertical-align: top;
+    background-color: var(--var-color-tertiary);
+    border-radius: 15px;
+    padding: 10px;
+    padding-bottom: 2px;
+    /*H D B G*/
+    margin: 15px;
+}
+
+.competence>img {
+    width: 70px;
+}
+
+@media (max-width: 700px) {
+    .competence {
+        min-height: 290px;
+        max-height: 290px;
+    }
+}
