@@ -15,6 +15,18 @@ body, html, .viewContainer{
 	padding-top: 8%;
 }
 
+.viewContainer article>h1 {   
+    background-color: var(--var-color-tertiary);
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px 15px;
+    color: black;
+    border: black 3px solid;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
 @media (max-width: 750px) {
 	.viewContainer article {
 		padding-top: 20%;

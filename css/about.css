@@ -8,7 +8,7 @@
 
 /* Présentation */
 
-#presentation .bubble{
+.about .bubble{
     background-color: var(--var-color-tertiary);
     font-size: 20px;
     text-align: justify;
@@ -22,7 +22,7 @@
     margin-bottom: 50px;
 }
 
-#presentation .bubble>h1 {
+.about .bubble>h1 {
     text-align: center;
     color: var(--var-color-tertiary);
     font-size: 30px;
@@ -30,11 +30,7 @@
 }
 
 /*Intérêts*/
-#interests {
-    padding: 0px;
-}
-
-#interests>pre {
+.about>pre {
     padding: 0px;
 	background-color: var(--var-color-tertiary);
     font-size: 25px;
@@ -44,19 +40,23 @@
     margin-bottom: 0px;
 }
 
-#interests>pre>a {
+.about>pre>a {
     color: black;
     text-decoration: none;
 }
 
+.about>pre>a:hover {
+    color: darkblue;
+}
+
 @media (max-width:900px) {
-    #interests>pre {
+    .about>pre {
         font-size: 20px;
     }
 }
 
 @media (max-width:750px) {
-    #interests>pre {
+    .about>pre {
         font-size: 12px;
     }
 }
