@@ -11,26 +11,6 @@ import ContactView from './page/ContactView.js';
 const header = document.querySelector('body>header');
 const toogleHeaderButton = new ToogleHeaderButton(header);
 
-fetch('./html/welcome.html')
-	.then(response => response.text())
-	.then(responseText => showFileContent(responseText, '.welcome'));
-
-fetch('./html/about.html')
-	.then(response => response.text())
-	.then(responseText => showFileContent(responseText, '.about'));
-
-fetch('./html/skills.html')
-	.then(response => response.text())
-	.then(responseText => showFileContent(responseText, '.skills'));
-
-fetch('./html/career.html')
-	.then(response => response.text())
-	.then(responseText => showFileContent(responseText, '.career'));
-
-function showFileContent(html, element) {
-	document.querySelector(element).innerHTML = html;
-}
-
 // Creation différentes des vues du site
 const welcomeView = new WelcomeView(document.querySelector('.welcome')),
 	aboutView = new AboutView(document.querySelector('.about')),

@@ -1,12 +1,17 @@
-<section>
-    <div class="ligneblanche"></div>
-    <h1>MES PROJETS</h1>
+<h1>MES PROJETS</h1>
 
-    <div class="result"></div>
+<div class="searchBar">
+    <form class="searchForm">
+        <input type="text" name="search" placeholder="Nom du jeu"/>
+        <select name="type">
+        </select>
+        <select name="ordering">
+            <option value="">Tri par pertinence</option>
+            <option value="-metacritic">Tri par note</option>
+            <option value="-released">Tri par date de sortie</option>
+        </select>
+        <button type="submit">Filtrer</button>
+    </form>
+</div>
 
-    <button id="showprojets" onclick="toggleProjects()">Voir plus</button>
-
-    <button id="hideprojets1" onclick="toggleProjects()">Voir moins</button>
-
-    <button id="hideprojets2" onclick="toggleProjects()">Voir moins</button>
-</section>
+<div class="result"></div>

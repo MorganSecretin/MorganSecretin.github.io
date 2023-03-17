@@ -7,8 +7,11 @@ export default class ProjectsView extends View {
 
 	constructor(element) {
 		super(element);
-
-		this.renderProjectList();
+		fetch('./html/projects.html')
+			.then(response => response.text())
+			.then(responseText =>
+				this.showFileContentAndProjects(responseText, '.projects')
+			);
 
 		// détection de la soumission du formulaire de recherche
 		/*this.searchForm = this.element.querySelector('.searchForm');
@@ -18,6 +21,11 @@ export default class ProjectsView extends View {
 
 		// ajout de la liste des types dans l'html
 		//this.searchForm.querySelector('#select_types').innerHTML = this.setTypes();
+	}
+
+	showFileContentAndProjects(html, element) {
+		this.showFileContent(html, element);
+		this.renderProjectList();
 	}
 
 	renderProjectList(types = '', search = '', ordering) {
@@ -39,7 +47,8 @@ export default class ProjectsView extends View {
 			.sort(sortingFunction) // tri
 			.forEach(project => (html += renderProjectThumbnail(project))); // génération du HTML
 		// maj de la page HTML
-		this.element.innerHTML = html;
+		this.element.querySelector('.result').innerHTML = html;
+		//this.element.innerHTML = html;
 	}
 
 	handleSearchFormSubmit(event) {
