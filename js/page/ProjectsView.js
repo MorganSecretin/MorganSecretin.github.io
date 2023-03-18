@@ -13,12 +13,6 @@ export default class ProjectsView extends View {
 				this.showFileContentAndProjects(responseText, '.projects')
 			);
 
-		// détection de la soumission du formulaire de recherche
-		/*this.searchForm = this.element.querySelector('.searchForm');
-		this.searchForm.addEventListener('submit', event =>
-			this.handleSearchFormSubmit(event)
-		);*/
-
 		// ajout de la liste des types dans l'html
 		//this.searchForm.querySelector('#select_types').innerHTML = this.setTypes();
 	}
@@ -26,13 +20,21 @@ export default class ProjectsView extends View {
 	showFileContentAndProjects(html, element) {
 		this.showFileContent(html, element);
 		this.renderProjectList();
+
+		// détection de la soumission du formulaire de recherche
+		this.searchForm = this.element.querySelector('.searchForm');
+		this.searchForm.addEventListener('submit', event =>
+			this.handleSearchFormSubmit(event)
+		);
 	}
 
 	renderProjectList(types = '', search = '', ordering) {
 		// calcul de la fonction de tri selon le paramètre ordering
 		let sortingFunction;
-		if (ordering == '-date') {
+		if (ordering == '-dateDown') {
 			sortingFunction = (a, b) => b.date.localeCompare(a.date);
+		} else if (ordering == '-dateUp') {
+			sortingFunction = (a, b) => a.date.localeCompare(b.date);
 		}
 
 		// parcours du tableau + génération du code HTML de la projectList
@@ -45,10 +47,12 @@ export default class ProjectsView extends View {
 				project.type.toLowerCase().includes(types.toLowerCase())
 			) // type
 			.sort(sortingFunction) // tri
-			.forEach(project => (html += renderProjectThumbnail(project))); // génération du HTML
+			.forEach(project => {
+				html += renderProjectThumbnail(project);
+			}); // génération du HTML
+
 		// maj de la page HTML
 		this.element.querySelector('.result').innerHTML = html;
-		//this.element.innerHTML = html;
 	}
 
 	handleSearchFormSubmit(event) {
@@ -56,7 +60,8 @@ export default class ProjectsView extends View {
 		const searchInput = this.searchForm.querySelector('[name=search]'),
 			orderingSelect = this.searchForm.querySelector('[name=ordering]'),
 			typesSelect = this.searchForm.querySelector('[name=types]');
-		this.renderGameList(
+
+		this.renderProjectList(
 			typesSelect.value,
 			searchInput.value,
 			orderingSelect.value

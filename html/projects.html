@@ -2,13 +2,28 @@
 
 <div class="searchBar">
     <form class="searchForm">
-        <input type="text" name="search" placeholder="Nom du jeu"/>
-        <select name="type">
+        <input type="text" name="search" placeholder="Nom du projet"/>
+        <label>Type :</label>
+        <select name="types">
+            <option value="">Tous</option>
+            <option value="java">java</option>
+            <option value="javafx">javafx</option>
+            <option value="git">git</option>
+            <option value="json">json</option>
+            <option value="agile">agile</option>
+            <option value="python">python</option>
+            <option value="pygame">pygame</option>
+            <option value="cryptage">cryptage</option>
+            <option value="genially">genially</option>
+            <option value="trello">trello</option>
+            <option value="html">html</option>
+            <option value="css">css</option>
         </select>
+        <label>Tri :</label>
         <select name="ordering">
             <option value="">Tri par pertinence</option>
-            <option value="-metacritic">Tri par note</option>
-            <option value="-released">Tri par date de sortie</option>
+            <option value="-dateDown">Tri par date recente</option>
+            <option value="-dateUp">Tri par date ancienne</option>
         </select>
         <button type="submit">Filtrer</button>
     </form>
