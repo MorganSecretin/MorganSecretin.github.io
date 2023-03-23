@@ -32,6 +32,9 @@ export default class Router {
 
 			// on affiche la nouvelle vue
 			route.view.show();
+
+			// on retourne en haut de la page
+			window.scrollTo(0, 0);
 		}
 	}
 }
