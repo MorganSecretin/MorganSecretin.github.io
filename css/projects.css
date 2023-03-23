@@ -115,3 +115,14 @@
     color: var(--var-color-secondary);
 }
 
+
+@media (max-width:750px){
+	.projects{
+		padding: 20px 5% 50px 5%;
+	}
+}
+
+
+
+
+
