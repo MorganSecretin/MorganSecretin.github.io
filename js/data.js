@@ -1,11 +1,11 @@
 const data = [
 	{
-		title: 'Application de Tutorat',
+		title: 'Tutorat',
 		imgUrl: 'img/Projet/Projet6.jpg',
-		type: `java javafx json git`,
+		type: `java javafx json git scolaire`,
 		date: `2022-05-31`,
 		littleDescription:
-			'Cette application permet de lier un tuteur et un tutoré.',
+			'Ce logiciel permet de lier un tuteur et un tutoré.',
 		link: 'https://youtu.be/mbyExsb27oA',
 		titleLink: 'Vidéo du projet',
 		bigDescription: `Il y avais diverse condition à respecter et
@@ -18,9 +18,29 @@ const data = [
 					complet.`,
 	},
 	{
+		title: 'Classification',
+		imgUrl: 'img/Projet/Projet7.jpg',
+		type: `java javafx csv git scolaire`,
+		date: `2022-12-02`,
+		littleDescription:
+			'Ce logiciel classifie des données avec la méthode kNN et affiche un graphique.',
+		link: '',
+		titleLink: '',
+		bigDescription: `En groupe de 4 nous avons créés ce logiciel afin d'afficher 
+					des données classifier. Nous avons la capacité d'y ajouter des 
+					données inconnus afin quelle soit automatiquement classé dans la
+					catégorie la plus probable en utilisant la méthode kNN. Nous utilisons 
+					également une méthode de test de la robutesse des réglages. Les réglages
+					sont modifiable et donc la méthode de test utilise les données à sa 
+					disposition pour données le pourcentage de la robustesse. (généralement
+					kNN obtiens de faible résultat). La difficulté de ce projet à été de 
+					faire en sorte que le programme soit générique et que les données soit 
+					le moins possible afficher par du code en dur.`,
+	},
+	{
 		title: 'CHESSCAPE',
 		imgUrl: 'img/Projet/Projet1.png',
-		type: `java agile git`,
+		type: `java agile git scolaire`,
 		date: `2022-09-06`,
 		littleDescription: `C'est un jeux d'échecs type rogue-like en projet agile avec
 					de la programmation en java.`,
@@ -38,7 +58,7 @@ const data = [
 	{
 		title: `SMM: Safe Money Manager`,
 		imgUrl: `img/Projet/Projet3.JPG`,
-		type: `python pygame`,
+		type: `python pygame personnel`,
 		date: `2020-10-01`,
 		littleDescription: `J'ai pour objectif de créé un gestionnaire de compte.`,
 		link: ``,
@@ -55,7 +75,7 @@ const data = [
 	{
 		title: `PCDD`,
 		imgUrl: `img/Projet/Projet4.JPG`,
-		type: `python cryptage`,
+		type: `python cryptage personnel`,
 		date: `2021-03-13`,
 		littleDescription: `PCDD est un logiciel de cryptage de mot de passe en Python.`,
 		link: ``,
@@ -69,7 +89,7 @@ const data = [
 	{
 		title: `Escape Game Passengers`,
 		imgUrl: `img/Projet/Projet5.JPG`,
-		type: `genially trello`,
+		type: `genially trello scolaire`,
 		date: `2022-05-11`,
 		littleDescription: `Ce projet est un escape game réalisé en Genially.`,
 		link: `https://view.genial.ly/627bc2a76c53040011928c4f/interactive-content-passengers`,
@@ -86,7 +106,7 @@ const data = [
 	{
 		title: `Use Heat`,
 		imgUrl: `img/Projet/Projet2.JPG`,
-		type: `html css`,
+		type: `html css scolaire`,
 		date: `2021-10-08`,
 		littleDescription: `En projet de 1er année, nous avons par équipe de 2 créés un
         site web.`,
