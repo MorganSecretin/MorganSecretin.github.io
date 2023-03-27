@@ -47,8 +47,14 @@ export default class ProjectsView extends View {
 				project.type.toLowerCase().includes(types.toLowerCase())
 			) // type
 			.sort(sortingFunction) // tri
-			.forEach(project => {
-				html += renderProjectThumbnail(project);
+			.forEach((project, index) => {
+				if (index % 2 == 0) {
+					html += '<div class="project_duo">';
+					html += renderProjectThumbnail(project);
+				} else {
+					html += renderProjectThumbnail(project);
+					html += '</div>';
+				}
 			}); // génération du HTML
 
 		// maj de la page HTML

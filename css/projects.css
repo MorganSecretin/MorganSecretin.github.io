@@ -62,8 +62,10 @@
 
 /*projects*/
 .projects {
-    background-color: var(--var-color-primary);
-    padding: 20px 20% 50px 20%;
+    background-image: url("../img/Fond/fondBois1.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    padding: 20px 5% 50px 5%;
 }
 
 .projects>h1 {
@@ -73,13 +75,20 @@
 	margin-bottom: 80px;
 }
 
+.project_duo {
+	margin-bottom: 50px;
+}
+
 .project_div {
+	vertical-align: middle;
+	display: inline;
     position: relative;
     margin: 10px;
+	height: 100%;
 }
 
 .project_img {
-    width: 100%;
+    width: 400px;
 }
 
 .project_div_text {
@@ -87,7 +96,7 @@
     text-align: center;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 40%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     color: var(--var-color-tertiary);
