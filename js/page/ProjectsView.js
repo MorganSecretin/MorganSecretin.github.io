@@ -3,18 +3,46 @@ import data from '../data.js';
 import View from './View.js';
 
 export default class ProjectsView extends View {
-	searchForm;
-
 	constructor(element) {
 		super(element);
+
 		fetch('./html/projects.html')
 			.then(response => response.text())
-			.then(responseText =>
-				this.showFileContentAndProjects(responseText, '.projects')
-			);
+			.then(responseText => {
+				this.showFileContentAndProjects(responseText, '.projects');
+				window.addEventListener('resize', event => {
+					this.chooseAnimation();
+					console.log('change size');
+				});
+			});
+	}
 
-		// ajout de la liste des types dans l'html
-		//this.searchForm.querySelector('#select_types').innerHTML = this.setTypes();
+	chooseAnimation() {
+		if (window.innerWidth > 500) {
+			this.element.querySelectorAll('.project_div').forEach(projectDiv => {
+				const divText = projectDiv.querySelector('.project_div_text');
+				const img = projectDiv.querySelector('.project_img');
+
+				divText.classList.add('hideSlow');
+				projectDiv.addEventListener('mouseover', event => {
+					divText.classList.remove('hideSlow');
+					divText.classList.add('showSlow');
+				});
+				projectDiv.addEventListener('mouseout', event => {
+					divText.classList.remove('showSlow');
+					divText.classList.add('hideSlow');
+				});
+			});
+		} else {
+			this.element.querySelectorAll('.project_div').forEach(projectDiv => {
+				const divText = projectDiv.querySelector('.project_div_text');
+
+				projectDiv.addEventListener('mouseover', event => {});
+				projectDiv.addEventListener('mouseout', event => {});
+				divText.classList.remove('hideSlow');
+				divText.classList.remove('showSlow');
+			});
+		}
 	}
 
 	showFileContentAndProjects(html, element) {
@@ -47,18 +75,15 @@ export default class ProjectsView extends View {
 				project.type.toLowerCase().includes(types.toLowerCase())
 			) // type
 			.sort(sortingFunction) // tri
-			.forEach((project, index) => {
-				if (index % 2 == 0) {
-					html += '<div class="project_duo">';
-					html += renderProjectThumbnail(project);
-				} else {
-					html += renderProjectThumbnail(project);
-					html += '</div>';
-				}
+			.forEach(project => {
+				html += renderProjectThumbnail(project);
 			}); // génération du HTML
 
 		// maj de la page HTML
 		this.element.querySelector('.result').innerHTML = html;
+
+		// Reset des animations
+		this.chooseAnimation();
 	}
 
 	handleSearchFormSubmit(event) {

@@ -11,6 +11,18 @@ body, html, .viewContainer{
 	display: none !important;
 }
 
+.hideSlow {
+    opacity: 0;
+    transition: 1s;
+}
+
+.showSlow {
+    opacity: 1;
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+
+
 .viewContainer article {
 	padding-top: 8%;
 }
