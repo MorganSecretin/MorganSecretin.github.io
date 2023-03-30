@@ -38,13 +38,13 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 500px) {
     .welcome {
         text-align: center;
     }
 
     .welcome img {
-        height: 80%;
+        height: 60%;
     }
 
     .welcome svg {
@@ -52,6 +52,6 @@
     }
 
     .welcome svg>text {
-        font-size: 30vh;
+        font-size: 15vh;
     }
 }

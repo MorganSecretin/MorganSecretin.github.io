@@ -1,4 +1,3 @@
-
 body>header {
     z-index: 10;
     position: fixed;
@@ -8,21 +7,17 @@ body>header {
     height: fit-content;
     border-bottom: 2px solid grey;
     /* (H) (D) (B) (G)*/ /* (H B) (G D) */ /* (H B G D) */
-    padding: 0px 20px;
+    padding: 0px;
     justify-content: center;
     min-height: 10%;
 }
 
-body>header>div {
-    display: flex;
-    width: 1200px;
-}
-
 body>header .headerImg {
-    width: 60px;
-    height: 40px;
-    margin-top: 15px;
+    width: 7vw;
+    height: 4vw;
+    margin: auto;
     margin-right: 50px;
+    align-self: center;
 }
 
 body>header nav {
@@ -36,34 +31,34 @@ body>header nav>a {
     text-decoration: none;
     padding: 20px 10px 5px 10px;
     height: 100%;
-    font-size: 150%;
+    font-size: var(--var-font-size-header);
 }
 
 body>header .navBar>a:hover {
     background-color: #526981;
+    border-bottom: 1.5px aqua solid;
 }
 
-@media (max-width:1054px) {
-    body>header nav>a {
-        font-size: 95%;
-    }
+body>header .navBar .active {
+    background-color: #526981;
+    border-bottom: 1.5px red solid;
 }
 
-@media (max-width:750px) {
+
+@media (max-width:500px) {
     body>header {
         min-height: 13%;
     }
 
     .openHeader, .closeHeader, .headerImg {
         position: absolute;
+        margin-top: 5%;
     }
 
     .headerImg {
+        width: 100px !important;
+        height: 60px !important;
         left: 20px;
-    }
-
-    body>header>div {
-        justify-content: center;
     }
 
     body>header .openHeader {
@@ -77,8 +72,8 @@ body>header .navBar>a:hover {
 
     body>header nav>a {
         display: block;
-        height: 50px;
+        height: 18%;
         text-align: center;
-        font-size: 120%;
+        font-size: 6vw;
     }
 }

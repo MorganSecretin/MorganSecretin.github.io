@@ -100,23 +100,17 @@
     border-radius: 15px;
     align-items: center;
     justify-content: center;
-}/*
+}
 
-.project_div_text:hover {
-    opacity: 1;
-    transition: 1s;
-    transition-delay: 0.3s;
-}*/
-
-.project_div_texte>h2 {
+.project_div_text>h2 {
     font-size: 2em;
 }
 
-.project_div_texte>p {
-    font-size: 1.5em;
+.project_div_text  {
+    font-size: var(--var-font-size-text);
 }
 
-.project_div_texte>p>a {
+.project_div_text>p>a {
     color: var(--var-color-secondary);
 }
 

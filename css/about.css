@@ -10,7 +10,7 @@
 
 .about .bubble{
     background-color: var(--var-color-tertiary);
-    font-size: 20px;
+    font-size: var(--var-font-size-text);
     text-align: justify;
     width: fit-content;
 
@@ -38,6 +38,8 @@
     width: fit-content;
     padding-right: 20px;
     margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .about>pre>a {
@@ -55,7 +57,11 @@
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:500px) {
+    .about {
+        padding: 5% 5%;
+    }
+
     .about>pre {
         font-size: 12px;
     }

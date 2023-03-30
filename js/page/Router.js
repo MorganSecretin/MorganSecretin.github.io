@@ -1,6 +1,7 @@
 export default class Router {
 	static routes = [];
 	static currentRoute;
+	static currentMenu;
 
 	static #menuElement;
 
@@ -13,6 +14,11 @@ export default class Router {
 				event.preventDefault();
 
 				const linkHref = event.currentTarget.getAttribute('href');
+				if (this.currentMenu) {
+					this.currentMenu.classList.remove('active');
+				}
+				this.currentMenu = event.currentTarget;
+				this.currentMenu.classList.add('active');
 				Router.navigate(linkHref);
 			})
 		);
