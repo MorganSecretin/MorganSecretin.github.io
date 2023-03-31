@@ -35,13 +35,13 @@ body>header nav>a {
 }
 
 body>header .navBar>a:hover {
-    background-color: #526981;
+    background-color: var(--var-color-tr-nav-over);
     border-bottom: 1.5px aqua solid;
 }
 
 body>header .navBar .active {
-    background-color: #526981;
-    border-bottom: 1.5px red solid;
+    background-color: var(--var-color-tr-nav-over);
+    border-top: 1.5px red solid;
 }
 
 
