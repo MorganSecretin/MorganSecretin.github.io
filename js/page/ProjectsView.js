@@ -64,7 +64,9 @@ export default class ProjectsView extends View {
 		search = '',
 		ordering
 	) {
-		console.log(types + '\n' + languages + '\n' + apps + '\n' + others);
+		console.log(
+			'1.' + types + '\n2.' + languages + '\n3.' + apps + '\n4.' + others
+		);
 		// calcul de la fonction de tri selon le paramètre ordering
 		let sortingFunction;
 		if (ordering == '-dateDown') {
@@ -134,7 +136,7 @@ export default class ProjectsView extends View {
 			checkboxTypes = this.searchForm.querySelectorAll('.checkboxType'),
 			checkboxLanguages = this.searchForm.querySelectorAll('.checkboxLanguage'),
 			checkboxApps = this.searchForm.querySelectorAll('.checkboxApp'),
-			checkboxOthers = this.searchForm.querySelectorAll('.checkboxTypeOther');
+			checkboxOthers = this.searchForm.querySelectorAll('.checkboxOther');
 
 		let types = '';
 		checkboxTypes.forEach(typeCheckbox => {
@@ -143,19 +145,19 @@ export default class ProjectsView extends View {
 			}
 		});
 		let languages = '';
-		checkboxTypes.forEach(languageCheckbox => {
+		checkboxLanguages.forEach(languageCheckbox => {
 			if (languageCheckbox.checked) {
 				languages += languageCheckbox.name + ' ';
 			}
 		});
 		let apps = '';
-		checkboxTypes.forEach(appCheckbox => {
+		checkboxApps.forEach(appCheckbox => {
 			if (appCheckbox.checked) {
 				apps += appCheckbox.name + ' ';
 			}
 		});
 		let others = '';
-		checkboxTypes.forEach(otherCheckbox => {
+		checkboxOthers.forEach(otherCheckbox => {
 			if (otherCheckbox.checked) {
 				others += otherCheckbox.name + ' ';
 			}
