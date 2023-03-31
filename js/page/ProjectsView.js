@@ -56,7 +56,15 @@ export default class ProjectsView extends View {
 		);
 	}
 
-	renderProjectList(types = '', search = '', ordering) {
+	renderProjectList(
+		types = '',
+		languages = '',
+		apps = '',
+		others = '',
+		search = '',
+		ordering
+	) {
+		console.log(types + '\n' + languages + '\n' + apps + '\n' + others);
 		// calcul de la fonction de tri selon le paramètre ordering
 		let sortingFunction;
 		if (ordering == '-dateDown') {
@@ -71,9 +79,42 @@ export default class ProjectsView extends View {
 			.filter(project =>
 				project.title.toLowerCase().includes(search.toLowerCase())
 			) // recherche
-			.filter(project =>
-				project.type.toLowerCase().includes(types.toLowerCase())
-			) // type
+			.filter(project => {
+				let valid = false;
+				types.split(' ').forEach(type => {
+					if (project.type.toLowerCase().includes(type.toLowerCase())) {
+						valid = true;
+					}
+				});
+				return valid;
+			}) // type
+			.filter(project => {
+				let valid = false;
+				languages.split(' ').forEach(language => {
+					if (project.type.toLowerCase().includes(language.toLowerCase())) {
+						valid = true;
+					}
+				});
+				return valid;
+			}) // langage
+			.filter(project => {
+				let valid = false;
+				apps.split(' ').forEach(app => {
+					if (project.type.toLowerCase().includes(app.toLowerCase())) {
+						valid = true;
+					}
+				});
+				return valid;
+			}) // app
+			.filter(project => {
+				let valid = false;
+				others.split(' ').forEach(other => {
+					if (project.type.toLowerCase().includes(other.toLowerCase())) {
+						valid = true;
+					}
+				});
+				return valid;
+			}) // other
 			.sort(sortingFunction) // tri
 			.forEach(project => {
 				html += renderProjectThumbnail(project);
@@ -90,10 +131,41 @@ export default class ProjectsView extends View {
 		event.preventDefault();
 		const searchInput = this.searchForm.querySelector('[name=search]'),
 			orderingSelect = this.searchForm.querySelector('[name=ordering]'),
-			typesSelect = this.searchForm.querySelector('[name=types]');
+			checkboxTypes = this.searchForm.querySelectorAll('.checkboxType'),
+			checkboxLanguages = this.searchForm.querySelectorAll('.checkboxLanguage'),
+			checkboxApps = this.searchForm.querySelectorAll('.checkboxApp'),
+			checkboxOthers = this.searchForm.querySelectorAll('.checkboxTypeOther');
+
+		let types = '';
+		checkboxTypes.forEach(typeCheckbox => {
+			if (typeCheckbox.checked) {
+				types += typeCheckbox.name + ' ';
+			}
+		});
+		let languages = '';
+		checkboxTypes.forEach(languageCheckbox => {
+			if (languageCheckbox.checked) {
+				languages += languageCheckbox.name + ' ';
+			}
+		});
+		let apps = '';
+		checkboxTypes.forEach(appCheckbox => {
+			if (appCheckbox.checked) {
+				apps += appCheckbox.name + ' ';
+			}
+		});
+		let others = '';
+		checkboxTypes.forEach(otherCheckbox => {
+			if (otherCheckbox.checked) {
+				others += otherCheckbox.name + ' ';
+			}
+		});
 
 		this.renderProjectList(
-			typesSelect.value,
+			types.substring(0, types.length - 1),
+			languages.substring(0, languages.length - 1),
+			apps.substring(0, apps.length - 1),
+			others.substring(0, others.length - 1),
 			searchInput.value,
 			orderingSelect.value
 		);

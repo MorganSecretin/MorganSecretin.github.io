@@ -5,90 +5,87 @@
         <input type="text" name="search" placeholder="Nom du projet"/>
 
         <fieldset>
-            <legend>Type de projet: <img src="../img/arrowDown.png" alt="\/"></legend>
+            <legend>Type de projet:</legend>
 
             <div>
-              <input type="checkbox" class="checkboxType" id="scolaire" name="scolaire" checked>
+              <input type="checkbox" class="checkboxType" id="scolaire" name="scolaire">
               <label for="scolaire">scolaires</label>
             </div>
             <div>
-              <input type="checkbox" class="checkboxType" id="personnel" name="personnel" checked>
+              <input type="checkbox" class="checkboxType" id="personnel" name="personnel">
               <label for="personnel">personnel</label>
             </div>
             <div>
-                <input type="checkbox" class="checkboxType" id="java" name="java" checked>
+                <input type="checkbox" class="checkboxType" id="agile" name="agile">
+                <label for="agile">agile</label>
+              </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Language :</legend>
+
+            <div>
+                <input type="checkbox" class="checkboxLanguage" id="java" name="java">
                 <label for="java">java</label>
               </div>
               <div>
-                <input type="checkbox" class="checkboxType" id="javafx" name="javafx" checked>
-                <label for="javafx">javafx</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="git" name="git" checked>
-                <label for="git">git</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="json" name="json" checked>
-                <label for="json">json</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="csv" name="csv" checked>
-                <label for="csv">csv</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="agile" name="agile" checked>
-                <label for="agile">agile</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="python" name="python" checked>
+                <input type="checkbox" class="checkboxLanguage" id="python" name="python">
                 <label for="python">python</label>
               </div>
               <div>
-                <input type="checkbox" class="checkboxType" id="pygame" name="pygame" checked>
-                <label for="pygame">pygame</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="cryptage" name="cryptage" checked>
-                <label for="cryptage">cryptage</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="genially" name="genially" checked>
-                <label for="genially">genially</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="trello" name="trello" checked>
-                <label for="trello">trello</label>
-              </div>
-              <div>
-                <input type="checkbox" class="checkboxType" id="html" name="html" checked>
+                <input type="checkbox" class="checkboxLanguage" id="html" name="html">
                 <label for="html">html</label>
               </div>
               <div>
-                <input type="checkbox" class="checkboxType" id="css" name="css" checked>
+                <input type="checkbox" class="checkboxLanguage" id="css" name="css">
                 <label for="css">css</label>
               </div>
                                         
         </fieldset>
-
-        <select name="types">
-            <option value="scolaire">scolaire</option>
-            <option value="personnel">personnel</option>
-            <option value="java">java</option>
-            <option value="javafx">javafx</option>
-            <option value="git">git</option>
-            <option value="json">json</option>
-            <option value="csv">csv</option>
-            <option value="agile">agile</option>
-            <option value="python">python</option>
-            <option value="pygame">pygame</option>
-            <option value="cryptage">cryptage</option>
-            <option value="genially">genially</option>
-            <option value="trello">trello</option>
-            <option value="html">html</option>
-            <option value="css">css</option>
-        </select>
-
         
+        <fieldset>
+          <legend>Logiciel :</legend>
+
+          <div>
+            <input type="checkbox" class="checkboxApp" id="git" name="git">
+            <label for="git">git</label>
+          </div>
+          <div>
+            <input type="checkbox" class="checkboxApp" id="genially" name="genially">
+            <label for="genially">genially</label>
+          </div>
+          <div>
+            <input type="checkbox" class="checkboxApp" id="trello" name="trello">
+            <label for="trello">trello</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Autres :</legend>
+
+          <div>
+            <input type="checkbox" class="checkboxOther" id="pygame" name="pygame">
+            <label for="pygame">pygame</label>
+          </div>
+          <div>
+            <input type="checkbox" class="checkboxOther" id="cryptage" name="cryptage">
+            <label for="cryptage">cryptage</label>
+          </div>
+          <div>
+            <input type="checkbox" class="checkboxOther" id="javafx" name="javafx">
+            <label for="javafx">javafx</label>
+          </div>
+          <div>
+            <input type="checkbox" class="checkboxOther" id="json" name="json">
+            <label for="json">json</label>
+          </div>
+          <div>
+            <input type="checkbox" class="checkboxOther" id="csv" name="csv">
+            <label for="csv">csv</label>
+          </div>
+        </fieldset>
+
         <label>Tri :</label>
         <select name="ordering">
             <option value="">Tri par pertinence</option>
