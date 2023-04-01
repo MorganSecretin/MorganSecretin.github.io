@@ -21,7 +21,12 @@ export default class ProjectsView extends View {
 	initFilterToggler() {
 		const filterToggler = this.element.querySelector('.minimum>h4');
 		filterToggler.addEventListener('click', event => {
-			console.log('click');
+			const filter = this.element.querySelector('.filter');
+			if (!filter.classList.contains('hide')) {
+				filter.classList.add('hide');
+			} else {
+				filter.classList.remove('hide');
+			}
 		});
 	}
 
