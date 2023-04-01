@@ -5,6 +5,23 @@
 	border-radius: 10px;
 }
 
+.minimum {
+	display: flex;
+}
+
+.minimum>h4 {
+	margin: 0px;
+}
+
+.minimum>h4>img {
+	width: 15px;
+}
+
+.minimum>h4:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 /*projects*/
 .projects {
     background-image: url("../img/Fond/fondBois1.jpg");

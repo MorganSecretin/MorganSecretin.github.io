@@ -24,7 +24,7 @@ export default class Router {
 		);
 	}
 
-	static navigate(path, skipPushState = false) {
+	static navigate(path) {
 		const route = this.routes.find(route => {
 			return route.path == path;
 		});

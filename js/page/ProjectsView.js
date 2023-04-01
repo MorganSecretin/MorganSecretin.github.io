@@ -14,7 +14,15 @@ export default class ProjectsView extends View {
 					this.chooseAnimation();
 					console.log('change size');
 				});
+				this.initFilterToggler();
 			});
+	}
+
+	initFilterToggler() {
+		const filterToggler = this.element.querySelector('.minimum>h4');
+		filterToggler.addEventListener('click', event => {
+			console.log('click');
+		});
 	}
 
 	chooseAnimation() {
