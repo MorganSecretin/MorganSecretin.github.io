@@ -3,6 +3,13 @@
 	background-color: var(--var-color-secondary);
 	padding: 10px;
 	border-radius: 10px;
+	width: fit-content;
+}
+
+.minimum>input {
+	padding: 5px;
+	border-radius: 5px;
+	margin-right: 10px;
 }
 
 .minimum {
@@ -11,6 +18,9 @@
 
 .minimum>h4 {
 	margin: 0px;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 .minimum>h4>img {
@@ -21,6 +31,31 @@
 	text-decoration: underline;
 	cursor: pointer;
 }
+
+.searchBar fieldset {
+	width: fit-content;
+	display: inline;
+	vertical-align: top;
+}
+
+.searchForm>button {
+	background-color: grey;
+	width: 7vw;
+	height: 3.5vw;
+	border: 1px grey solid;
+	padding: 10px 15px;
+	margin: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.searchForm>button:hover {
+	background-color: rgb(139, 139, 139);
+	width: 7.5vw;
+	height: 3.8vw;
+	margin: 13px 12px;
+}
+
 
 /*projects*/
 .projects {
@@ -76,8 +111,6 @@
     color: var(--var-color-secondary);
 }
 
-
-
 @media (max-width:1300px){
 	.project_img {
 		width: 400px;
@@ -93,6 +126,16 @@
 		margin-bottom: 30px;
 		height: 100%;
 		border-radius: 15px;
+	}
+
+	.searchForm>button {
+		width: 70px;
+		height: 40px;
+	}
+	
+	.searchForm>button:hover {
+		width: 70px;
+		height: 40px;
 	}
 
 	.project_img {
