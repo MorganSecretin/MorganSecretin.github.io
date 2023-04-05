@@ -4,8 +4,7 @@ const data = [
 		imgUrl: 'img/Projet/Projet6.jpg',
 		type: `java javafx json git scolaire`,
 		date: `2022-05-31`,
-		littleDescription:
-			'Ce logiciel permet de lier un tuteur et un tutoré.',
+		littleDescription: 'Ce logiciel permet de lier un tuteur et un tutoré.',
 		link: 'https://youtu.be/mbyExsb27oA',
 		titleLink: 'Vidéo du projet',
 		bigDescription: `Il y avais diverse condition à respecter et
@@ -122,6 +121,16 @@ const data = [
     passionnés par le sujet de notre travail. Nous nous sommes donc
     donner à fond. Le rendu est beau et donne envie malgrés qu'il ne
     soit pas fonctionnel car demander dans les consignes.`,
+	},
+	{
+		title: `Veille Info Bot`,
+		imgUrl: `img/Projet/Projet8.PNG`,
+		type: `python api personnel`,
+		date: `2023-01-10`,
+		littleDescription: `TXT`,
+		link: `https://github.com/SolaireFR/VeilleInfoBot`,
+		titleLink: `Voir le depot`,
+		bigDescription: `TXT`,
 	},
 ];
 

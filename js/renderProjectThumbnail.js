@@ -16,10 +16,7 @@ export default function renderProjectThumbnail({
         <h2 class="project_title">${title}</h2>
         <time datetime="${date}">${dateShow.toLocaleDateString()}</time>
         <p class="little_description">${littleDescription}</p>
-        <p class="big_description">
-            <a href="${link}" target="_blank">${titleLink}</a> <br>
-            ${bigDescription}
-        </p>
+        <a href="${link}" target="_blank">${titleLink}</a> <br>
     </div>
 </div>`;
 }

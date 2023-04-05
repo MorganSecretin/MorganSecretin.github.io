@@ -32,6 +32,6 @@ Router.routes = routes;
 Router.setMenuElement(document.querySelector('body>header nav'));
 
 // chargement de la vue initiale selon l"URL demandée par l"utilisateur.rice (Deep linking)
-Router.navigate('/projects');
+Router.navigate('/');
 
 console.log('Tout Fonctionne');

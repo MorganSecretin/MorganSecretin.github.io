@@ -45,7 +45,7 @@ body>header .navBar .active {
 }
 
 
-@media (max-width:500px) {
+@media (max-width:750px) {
     body>header {
         min-height: 13%;
     }
@@ -70,6 +70,15 @@ body>header .navBar .active {
         width: 100%;
     }
 
+    body>header nav>a {
+        display: block;
+        height: 18%;
+        text-align: center;
+        font-size: 4vw;
+    }
+}
+
+@media (max-width:500px){
     body>header nav>a {
         display: block;
         height: 18%;
