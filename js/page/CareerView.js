@@ -5,6 +5,6 @@ export default class CareerView extends View {
 		super(element);
 		fetch('./html/career.html')
 			.then(response => response.text())
-			.then(responseText => this.showFileContent(responseText, '.career'));
+			.then(responseText => this.showFileContent(responseText));
 	}
 }

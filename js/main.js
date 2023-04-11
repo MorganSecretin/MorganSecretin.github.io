@@ -5,6 +5,7 @@ import AboutView from './page/AboutView.js';
 import SkillsView from './page/SkillsView.js';
 import CareerView from './page/CareerView.js';
 import ProjectsView from './page/ProjectsView.js';
+import DetailsView from './page/DetailsView.js';
 
 /* INIT */
 const header = document.querySelector('body>header');
@@ -15,7 +16,8 @@ const welcomeView = new WelcomeView(document.querySelector('.welcome')),
 	aboutView = new AboutView(document.querySelector('.about')),
 	skillsView = new SkillsView(document.querySelector('.skills')),
 	careerView = new CareerView(document.querySelector('.career')),
-	projectsView = new ProjectsView(document.querySelector('.projects'));
+	projectsView = new ProjectsView(document.querySelector('.projects')),
+	detailsView = new DetailsView(document.querySelector('.details'));
 
 // mise en place du Router
 const routes = [
@@ -25,6 +27,7 @@ const routes = [
 	{ path: '/skills', view: skillsView },
 	{ path: '/career', view: careerView },
 	{ path: '/projects', view: projectsView },
+	{ path: '/details', view: detailsView },
 ];
 Router.routes = routes;
 

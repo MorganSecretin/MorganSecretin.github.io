@@ -5,6 +5,6 @@ export default class AboutView extends View {
 		super(element);
 		fetch('./html/about.html')
 			.then(response => response.text())
-			.then(responseText => this.showFileContent(responseText, '.about'));
+			.then(responseText => this.showFileContent(responseText));
 	}
 }

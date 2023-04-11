@@ -36,11 +36,15 @@ export default class Router {
 			}
 			this.currentRoute = route;
 
+			// Affichage des details d'un projet
+			if (route.path == '/details') {
+				route.view.renderProjectDetails();
+			}
 			// on affiche la nouvelle vue
 			route.view.show();
-
-			// on retourne en haut de la page
-			window.scrollTo(0, 0);
 		}
+
+		// on retourne en haut de la page
+		window.scrollTo(0, 0);
 	}
 }

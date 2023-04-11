@@ -24,7 +24,7 @@ export default class View {
 		this.element.classList.add('hide');
 	}
 
-	showFileContent(html, element) {
-		document.querySelector(element).innerHTML = html;
+	showFileContent(html) {
+		this.element.innerHTML = html;
 	}
 }

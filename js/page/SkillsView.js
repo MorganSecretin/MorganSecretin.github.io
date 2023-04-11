@@ -5,6 +5,6 @@ export default class SkillsView extends View {
 		super(element);
 		fetch('./html/skills.html')
 			.then(response => response.text())
-			.then(responseText => this.showFileContent(responseText, '.skills'));
+			.then(responseText => this.showFileContent(responseText));
 	}
 }

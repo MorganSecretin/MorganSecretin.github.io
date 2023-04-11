@@ -5,6 +5,6 @@ export default class WelcomeView extends View {
 		super(element);
 		fetch('./html/welcome.html')
 			.then(response => response.text())
-			.then(responseText => this.showFileContent(responseText, '.welcome'));
+			.then(responseText => this.showFileContent(responseText));
 	}
 }

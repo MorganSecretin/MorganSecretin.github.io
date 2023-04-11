@@ -1,6 +1,7 @@
 import renderProjectThumbnail from '../renderProjectThumbnail.js';
 import data from '../data.js';
 import View from './View.js';
+import Router from './Router.js';
 
 export default class ProjectsView extends View {
 	constructor(element) {
@@ -9,13 +10,33 @@ export default class ProjectsView extends View {
 		fetch('./html/projects.html')
 			.then(response => response.text())
 			.then(responseText => {
-				this.showFileContentAndProjects(responseText, '.projects');
+				this.showFileContentAndProjects(responseText);
+				this.initDetailsLinks();
 				window.addEventListener('resize', event => {
 					this.chooseAnimation();
-					console.log('change size');
 				});
 				this.initFilterToggler();
 			});
+	}
+
+	initDetailsLinks() {
+		const listLink = this.element.querySelectorAll('.project_div');
+		listLink.forEach(projectHTML => {
+			const link = projectHTML.querySelector('.project_div_text>a');
+			link.addEventListener('click', event => {
+				event.preventDefault();
+
+				// Activation du bon projet
+				data.forEach(project => {
+					if (project.title == link.className.split(' ')[0]) {
+						project.active = true;
+					}
+				});
+
+				// Changement page
+				Router.navigate('/details');
+			});
+		});
 	}
 
 	initFilterToggler() {
@@ -58,8 +79,8 @@ export default class ProjectsView extends View {
 		}
 	}
 
-	showFileContentAndProjects(html, element) {
-		this.showFileContent(html, element);
+	showFileContentAndProjects(html) {
+		this.showFileContent(html);
 		this.renderProjectList();
 
 		// détection de la soumission du formulaire de recherche
@@ -77,9 +98,6 @@ export default class ProjectsView extends View {
 		search = '',
 		ordering
 	) {
-		console.log(
-			'1.' + types + '\n2.' + languages + '\n3.' + apps + '\n4.' + others
-		);
 		// calcul de la fonction de tri selon le paramètre ordering
 		let sortingFunction;
 		if (ordering == '-dateDown') {
@@ -189,6 +207,8 @@ export default class ProjectsView extends View {
 	setTypes() {
 		let listTypes = '';
 		data.forEach(project => {
+			project.active = false;
+
 			// récupération de tout les types d'un projet
 			const typesString = project.type.split(' ');
 			typesString.forEach(type => {
