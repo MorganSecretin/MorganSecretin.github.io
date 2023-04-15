@@ -28,7 +28,7 @@ export default class ProjectsView extends View {
 
 				// Activation du bon projet
 				data.forEach(project => {
-					if (project.title == link.className.split(' ')[0]) {
+					if (project.title.replace(' ', '-') == link.className.split(' ')[0]) {
 						project.active = true;
 					}
 				});
@@ -91,7 +91,7 @@ export default class ProjectsView extends View {
 	}
 
 	renderProjectList(
-		types = '',
+		technos = '',
 		languages = '',
 		apps = '',
 		others = '',
@@ -114,8 +114,8 @@ export default class ProjectsView extends View {
 			) // recherche
 			.filter(project => {
 				let valid = false;
-				types.split(' ').forEach(type => {
-					if (project.type.toLowerCase().includes(type.toLowerCase())) {
+				technos.split(' ').forEach(techno => {
+					if (project.technos.toLowerCase().includes(techno.toLowerCase())) {
 						valid = true;
 					}
 				});
@@ -124,7 +124,7 @@ export default class ProjectsView extends View {
 			.filter(project => {
 				let valid = false;
 				languages.split(' ').forEach(language => {
-					if (project.type.toLowerCase().includes(language.toLowerCase())) {
+					if (project.technos.toLowerCase().includes(language.toLowerCase())) {
 						valid = true;
 					}
 				});
@@ -133,7 +133,7 @@ export default class ProjectsView extends View {
 			.filter(project => {
 				let valid = false;
 				apps.split(' ').forEach(app => {
-					if (project.type.toLowerCase().includes(app.toLowerCase())) {
+					if (project.technos.toLowerCase().includes(app.toLowerCase())) {
 						valid = true;
 					}
 				});
@@ -142,7 +142,7 @@ export default class ProjectsView extends View {
 			.filter(project => {
 				let valid = false;
 				others.split(' ').forEach(other => {
-					if (project.type.toLowerCase().includes(other.toLowerCase())) {
+					if (project.technos.toLowerCase().includes(other.toLowerCase())) {
 						valid = true;
 					}
 				});
@@ -164,15 +164,15 @@ export default class ProjectsView extends View {
 		event.preventDefault();
 		const searchInput = this.searchForm.querySelector('[name=search]'),
 			orderingSelect = this.searchForm.querySelector('[name=ordering]'),
-			checkboxTypes = this.searchForm.querySelectorAll('.checkboxType'),
+			checkboxTechno = this.searchForm.querySelectorAll('.checkboxType'),
 			checkboxLanguages = this.searchForm.querySelectorAll('.checkboxLanguage'),
 			checkboxApps = this.searchForm.querySelectorAll('.checkboxApp'),
 			checkboxOthers = this.searchForm.querySelectorAll('.checkboxOther');
 
-		let types = '';
-		checkboxTypes.forEach(typeCheckbox => {
+		let technos = '';
+		checkboxType.forEach(typeCheckbox => {
 			if (typeCheckbox.checked) {
-				types += typeCheckbox.name + ' ';
+				technos += typeCheckbox.name + ' ';
 			}
 		});
 		let languages = '';
@@ -195,7 +195,7 @@ export default class ProjectsView extends View {
 		});
 
 		this.renderProjectList(
-			types.substring(0, types.length - 1),
+			technos.substring(0, technos.length - 1),
 			languages.substring(0, languages.length - 1),
 			apps.substring(0, apps.length - 1),
 			others.substring(0, others.length - 1),
@@ -205,27 +205,29 @@ export default class ProjectsView extends View {
 	}
 
 	setTypes() {
-		let listTypes = '';
+		let listTechnos = '';
 		data.forEach(project => {
 			project.active = false;
 
 			// récupération de tout les types d'un projet
-			const typesString = project.type.split(' ');
-			typesString.forEach(type => {
+			const technosString = project.technos.split(' ');
+			technosString.forEach(techno => {
 				// ajoute si n'existe pas
-				if (!listTypes.toLowerCase().includes(type.toLowerCase())) {
-					listTypes = listTypes + ' ' + type;
+				if (!listTechnos.toLowerCase().includes(techno.toLowerCase())) {
+					listTechnos = listTechnos + ' ' + techno;
 				}
 			});
 		});
 
 		// Creation de l'html
-		return listTypes.split(' ').forEach(type => this.renderTypeOption(type));
+		return listTechnos
+			.split(' ')
+			.forEach(techno => this.renderTechnoOption(techno));
 	}
 
-	renderTypeOption(type) {
+	renderTechnoOption(techno) {
 		return `
-        <option value="${type}">${type}</option>
+        <option value="${techno}">${techno}</option>
         `;
 	}
 }

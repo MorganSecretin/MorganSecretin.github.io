@@ -1,8 +1,25 @@
 const data = [
 	{
+		title: 'agar.IUT',
+		imgUrl: 'img/Projet/Projet10.PNG',
+		technos: `typescript node babel git scolaire`,
+		skills: `travail-d'équipe 
+		découverte-nouvelle-technologie 
+		déploiement-d'application`,
+		date: `2023-04-14`,
+		littleDescription:
+			'Ce projet est un serveur pour jouer a un jeu "agar.io" de notre conception.',
+		link: '',
+		titleLink: '',
+		bigDescription: `TXT`,
+		active: false,
+	},
+	{
 		title: 'Tutorat',
 		imgUrl: 'img/Projet/Projet6.jpg',
-		type: `java javafx json git scolaire`,
+		technos: `java javafx json git scolaire`,
+		skills: ``,
+		skills: ``,
 		date: `2022-05-31`,
 		littleDescription: 'Ce logiciel permet de lier un tuteur et un tutoré.',
 		link: 'https://youtu.be/mbyExsb27oA',
@@ -19,7 +36,8 @@ const data = [
 	{
 		title: 'Classification',
 		imgUrl: 'img/Projet/Projet7.jpg',
-		type: `java javafx csv git scolaire`,
+		technos: `java javafx csv git scolaire`,
+		skills: ``,
 		date: `2022-12-02`,
 		littleDescription:
 			'Ce logiciel classifie des données avec la méthode kNN et affiche un graphique.',
@@ -40,7 +58,9 @@ const data = [
 	{
 		title: 'CHESSCAPE',
 		imgUrl: 'img/Projet/Projet1.png',
-		type: `java agile git scolaire`,
+		technos: `java agile git scolaire`,
+		skills: ``,
+		skills: ``,
 		date: `2022-09-06`,
 		littleDescription: `C'est un jeux d'échecs type rogue-like en projet agile avec
 					de la programmation en java.`,
@@ -59,7 +79,8 @@ const data = [
 	{
 		title: `SMM: Safe Money Manager`,
 		imgUrl: `img/Projet/Projet3.JPG`,
-		type: `python pygame personnel`,
+		technos: `python pygame personnel`,
+		skills: ``,
 		date: `2020-10-01`,
 		littleDescription: `J'ai pour objectif de créér un gestionnaire de compte.`,
 		link: ``,
@@ -77,7 +98,8 @@ const data = [
 	{
 		title: `PCDD`,
 		imgUrl: `img/Projet/Projet4.JPG`,
-		type: `python cryptage personnel`,
+		technos: `python cryptage personnel`,
+		skills: ``,
 		date: `2021-03-13`,
 		littleDescription: `PCDD est un logiciel de cryptage de mot de passe en Python.`,
 		link: ``,
@@ -92,7 +114,8 @@ const data = [
 	{
 		title: `Escape Game Passengers`,
 		imgUrl: `img/Projet/Projet5.JPG`,
-		type: `genially trello scolaire`,
+		technos: `genially trello scolaire`,
+		skills: ``,
 		date: `2022-05-11`,
 		littleDescription: `Ce projet est un escape game réalisé en Genially.`,
 		link: `https://view.genial.ly/627bc2a76c53040011928c4f/interactive-content-passengers`,
@@ -110,7 +133,8 @@ const data = [
 	{
 		title: `Use Heat`,
 		imgUrl: `img/Projet/Projet2.JPG`,
-		type: `html css scolaire`,
+		technos: `html css scolaire`,
+		skills: ``,
 		date: `2021-10-08`,
 		littleDescription: `En projet de 1re année, nous avons par équipe de 2 créés un
         site web.`,
@@ -131,7 +155,8 @@ const data = [
 	{
 		title: `Veille Info Bot`,
 		imgUrl: `img/Projet/Projet8.PNG`,
-		type: `python tkinter api personnel`,
+		technos: `python tkinter api personnel`,
+		skills: ``,
 		date: `2023-01-10`,
 		littleDescription: `Ce logiciel affiche des articles internet 
 		utilisant une API afin de faire de la veille informatique.`,
@@ -143,7 +168,8 @@ const data = [
 	{
 		title: `Api Pizzeria`,
 		imgUrl: `img/Projet/Projet9.png`,
-		type: `java tomcat api scolaire`,
+		technos: `java tomcat api scolaire`,
+		skills: ``,
 		date: `2023-03-06`,
 		littleDescription: `Ce projet est une api rest sur une pizzeria 
 		avec des get, post, delete, et autres avec le serveur tomcat.`,

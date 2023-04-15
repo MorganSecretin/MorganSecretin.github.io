@@ -1,3 +1,5 @@
+import data from '../data.js';
+
 export default class Router {
 	static routes = [];
 	static currentRoute;
@@ -40,6 +42,13 @@ export default class Router {
 			if (route.path == '/details') {
 				route.view.renderProjectDetails();
 			}
+			// on désactive les détails des projets
+			else if (route.path == '/projects') {
+				data.forEach(project => {
+					project.active = false;
+				});
+			}
+
 			// on affiche la nouvelle vue
 			route.view.show();
 		}

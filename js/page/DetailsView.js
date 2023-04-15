@@ -16,15 +16,28 @@ export default class DetailsView extends View {
 				this.element.querySelector('img').src = project.imgUrl;
 				this.element.querySelector('a').href = project.link;
 				this.element.querySelector('a').innerHTML = project.titleLink;
-				this.element.querySelector('.description').innerHTML =
+				this.element.querySelector('.description>p').innerHTML =
 					project.bigDescription;
 
-				this.initList();
+				this.initList(project);
 			}
 		});
 	}
 
-	initList() {
-		let htmlCompetence = this.element.querySelector('.description');
+	initList(project) {
+		let description = this.element.querySelector('.description');
+
+		let html = '';
+
+		project.technos.split(' ').forEach(techno => {
+			html += `
+			<li>
+				${techno}
+			</li>`;
+		});
+
+		console.log(description);
+
+		description.querySelector('.gainSkills').innerHTML = html;
 	}
 }
