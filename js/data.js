@@ -8,18 +8,26 @@ const data = [
 		déploiement-d'application`,
 		date: `2023-04-14`,
 		littleDescription:
-			'Ce projet est un serveur pour jouer a un jeu "agar.io" de notre conception.',
-		link: '',
-		titleLink: '',
-		bigDescription: `TXT`,
-		active: false,
+			'Ce projet est un serveur en javascript pour jouer a un jeu basé sur "agar.io".',
+		link: 'http://lol',
+		titleLink: 'lol',
+		bigDescription: `C'est un de mes projets personnels les plus
+        ambitieux. J'y ai passer beaucoup d'heure en python pour arriver à
+        un résultat bien avancer. Seuleument, j'ai beaucoup trop appris sur
+        la programmation ce qui ma obligé à recommencer ce code plusieurs
+        fois. Au final, j'ai décidé de le passer dans une version java avec
+        la bibliothéque JavaFX. Cela me permet d'apprendre par moi même
+        dans un logiciel qui un jour pourrai vraiment servir. La version
+        java est toujours en cours sur GitHub.`,
+		active: true,
 	},
 	{
 		title: 'Tutorat',
 		imgUrl: 'img/Projet/Projet6.jpg',
 		technos: `java javafx json git scolaire`,
-		skills: ``,
-		skills: ``,
+		skills: `travail-d'équipe 
+		découverte-nouvelle-technologie 
+		déploiement-d'application`,
 		date: `2022-05-31`,
 		littleDescription: 'Ce logiciel permet de lier un tuteur et un tutoré.',
 		link: 'https://youtu.be/mbyExsb27oA',
@@ -37,7 +45,9 @@ const data = [
 		title: 'Classification',
 		imgUrl: 'img/Projet/Projet7.jpg',
 		technos: `java javafx csv git scolaire`,
-		skills: ``,
+		skills: `travail-d'équipe 
+		découverte-nouvelle-technologie 
+		déploiement-d'application`,
 		date: `2022-12-02`,
 		littleDescription:
 			'Ce logiciel classifie des données avec la méthode kNN et affiche un graphique.',
@@ -59,8 +69,9 @@ const data = [
 		title: 'CHESSCAPE',
 		imgUrl: 'img/Projet/Projet1.png',
 		technos: `java agile git scolaire`,
-		skills: ``,
-		skills: ``,
+		skills: `travail-d'équipe 
+		découverte-nouvelle-technologie 
+		déploiement-d'application`,
 		date: `2022-09-06`,
 		littleDescription: `C'est un jeux d'échecs type rogue-like en projet agile avec
 					de la programmation en java.`,
@@ -80,7 +91,7 @@ const data = [
 		title: `SMM: Safe Money Manager`,
 		imgUrl: `img/Projet/Projet3.JPG`,
 		technos: `python pygame personnel`,
-		skills: ``,
+		skills: `déploiement-d'application`,
 		date: `2020-10-01`,
 		littleDescription: `J'ai pour objectif de créér un gestionnaire de compte.`,
 		link: ``,
@@ -99,7 +110,7 @@ const data = [
 		title: `PCDD`,
 		imgUrl: `img/Projet/Projet4.JPG`,
 		technos: `python cryptage personnel`,
-		skills: ``,
+		skills: `algorithmie interface`,
 		date: `2021-03-13`,
 		littleDescription: `PCDD est un logiciel de cryptage de mot de passe en Python.`,
 		link: ``,
@@ -115,7 +126,9 @@ const data = [
 		title: `Escape Game Passengers`,
 		imgUrl: `img/Projet/Projet5.JPG`,
 		technos: `genially trello scolaire`,
-		skills: ``,
+		skills: `travail-d'équipe 
+		découverte-nouvelle-technologie 
+		déploiement-d'application`,
 		date: `2022-05-11`,
 		littleDescription: `Ce projet est un escape game réalisé en Genially.`,
 		link: `https://view.genial.ly/627bc2a76c53040011928c4f/interactive-content-passengers`,
@@ -134,7 +147,8 @@ const data = [
 		title: `Use Heat`,
 		imgUrl: `img/Projet/Projet2.JPG`,
 		technos: `html css scolaire`,
-		skills: ``,
+		skills: `travail-d'équipe 
+		design-site-web`,
 		date: `2021-10-08`,
 		littleDescription: `En projet de 1re année, nous avons par équipe de 2 créés un
         site web.`,
@@ -156,7 +170,8 @@ const data = [
 		title: `Veille Info Bot`,
 		imgUrl: `img/Projet/Projet8.PNG`,
 		technos: `python tkinter api personnel`,
-		skills: ``,
+		skills: `travail-d'équipe
+		découverte-nouvelle-technologie`,
 		date: `2023-01-10`,
 		littleDescription: `Ce logiciel affiche des articles internet 
 		utilisant une API afin de faire de la veille informatique.`,
@@ -169,7 +184,9 @@ const data = [
 		title: `Api Pizzeria`,
 		imgUrl: `img/Projet/Projet9.png`,
 		technos: `java tomcat api scolaire`,
-		skills: ``,
+		skills: `travail-d'équipe 
+		découverte-nouvelle-technologie 
+		déploiement-d'application`,
 		date: `2023-03-06`,
 		littleDescription: `Ce projet est une api rest sur une pizzeria 
 		avec des get, post, delete, et autres avec le serveur tomcat.`,

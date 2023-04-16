@@ -1,0 +1,29 @@
+.details {
+    background-image: url("../img/Fond/fondBois1.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100vh;
+    text-align: center;
+}
+
+.details .container {
+    background-color: var(--var-color-secondary);
+    margin: auto 300px;
+}
+.details .details_main {
+    width: fit-content;
+}
+
+.details_left img {
+    max-width: 100%;
+}
+
+.details_left , .details_right {
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: top;
+
+    width: fit-content;
+    max-width: 40%;
+    text-align: left;
+    font-size: var(--var-font-size-text);
+}

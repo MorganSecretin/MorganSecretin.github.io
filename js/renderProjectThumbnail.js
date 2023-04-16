@@ -16,7 +16,10 @@ export default function renderProjectThumbnail({
         <h2 class="project_title">${title}</h2>
         <time datetime="${date}">${dateShow.toLocaleDateString()}</time>
         <p class="little_description">${littleDescription}</p>
-        <a class="${title.replace(' ', '-')}" href="/details">Détails</a> <br>
+        <a class="${title.replaceAll(
+					' ',
+					'-'
+				)}" href="/details">Détails</a> <br>
     </div>
 </div>`;
 }

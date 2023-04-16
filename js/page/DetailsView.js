@@ -1,12 +1,17 @@
 import View from './View.js';
 import data from '../data.js';
+import Router from './Router.js';
 
 export default class DetailsView extends View {
 	constructor(element) {
 		super(element);
 		fetch('./html/details.html')
 			.then(response => response.text())
-			.then(responseText => this.showFileContent(responseText));
+			.then(responseText => {
+				this.showFileContent(responseText);
+				// TEMPO
+				Router.navigate('/details');
+			});
 	}
 
 	renderProjectDetails() {
@@ -16,8 +21,7 @@ export default class DetailsView extends View {
 				this.element.querySelector('img').src = project.imgUrl;
 				this.element.querySelector('a').href = project.link;
 				this.element.querySelector('a').innerHTML = project.titleLink;
-				this.element.querySelector('.description>p').innerHTML =
-					project.bigDescription;
+				this.element.querySelector('p').innerHTML = project.bigDescription;
 
 				this.initList(project);
 			}
@@ -25,19 +29,24 @@ export default class DetailsView extends View {
 	}
 
 	initList(project) {
-		let description = this.element.querySelector('.description');
-
+		// Technos
 		let html = '';
-
 		project.technos.split(' ').forEach(techno => {
 			html += `
 			<li>
 				${techno}
 			</li>`;
 		});
+		this.element.querySelector('.techUsed').innerHTML = html;
 
-		console.log(description);
-
-		description.querySelector('.gainSkills').innerHTML = html;
+		// Skills
+		html = '';
+		project.skills.split(' ').forEach(skill => {
+			html += `
+			<li>
+				${skill.replaceAll('-', ' ')}
+			</li>`;
+		});
+		this.element.querySelector('.gainSkills').innerHTML = html;
 	}
 }

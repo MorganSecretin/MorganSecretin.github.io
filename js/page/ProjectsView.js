@@ -28,7 +28,9 @@ export default class ProjectsView extends View {
 
 				// Activation du bon projet
 				data.forEach(project => {
-					if (project.title.replace(' ', '-') == link.className.split(' ')[0]) {
+					if (
+						project.title.replaceAll(' ', '-') == link.className.split(' ')[0]
+					) {
 						project.active = true;
 					}
 				});
