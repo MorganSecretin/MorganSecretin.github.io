@@ -166,7 +166,7 @@ export default class ProjectsView extends View {
 		event.preventDefault();
 		const searchInput = this.searchForm.querySelector('[name=search]'),
 			orderingSelect = this.searchForm.querySelector('[name=ordering]'),
-			checkboxTechno = this.searchForm.querySelectorAll('.checkboxType'),
+			checkboxType = this.searchForm.querySelectorAll('.checkboxType'),
 			checkboxLanguages = this.searchForm.querySelectorAll('.checkboxLanguage'),
 			checkboxApps = this.searchForm.querySelectorAll('.checkboxApp'),
 			checkboxOthers = this.searchForm.querySelectorAll('.checkboxOther');

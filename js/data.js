@@ -1,8 +1,14 @@
+import TypeProject from './TypeProject.js';
+
 const data = [
 	{
 		title: 'agar.IUT',
 		imgUrl: 'img/Projet/Projet10.PNG',
-		technos: `typescript node babel git scolaire`,
+		type: TypeProject.SCOLAIRE,
+		languages: 'typescript',
+		tools: 'git',
+		others: 'node babel',
+		technos: `    `,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
@@ -24,6 +30,10 @@ const data = [
 	{
 		title: 'Tutorat',
 		imgUrl: 'img/Projet/Projet6.jpg',
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `java javafx json git scolaire`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
@@ -44,6 +54,10 @@ const data = [
 	{
 		title: 'Classification',
 		imgUrl: 'img/Projet/Projet7.jpg',
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `java javafx csv git scolaire`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
@@ -68,6 +82,10 @@ const data = [
 	{
 		title: 'CHESSCAPE',
 		imgUrl: 'img/Projet/Projet1.png',
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `java agile git scolaire`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
@@ -90,6 +108,10 @@ const data = [
 	{
 		title: `SMM: Safe Money Manager`,
 		imgUrl: `img/Projet/Projet3.JPG`,
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `python pygame personnel`,
 		skills: `déploiement-d'application`,
 		date: `2020-10-01`,
@@ -109,6 +131,10 @@ const data = [
 	{
 		title: `PCDD`,
 		imgUrl: `img/Projet/Projet4.JPG`,
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `python cryptage personnel`,
 		skills: `algorithmie interface`,
 		date: `2021-03-13`,
@@ -125,6 +151,10 @@ const data = [
 	{
 		title: `Escape Game Passengers`,
 		imgUrl: `img/Projet/Projet5.JPG`,
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `genially trello scolaire`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
@@ -146,6 +176,10 @@ const data = [
 	{
 		title: `Use Heat`,
 		imgUrl: `img/Projet/Projet2.JPG`,
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `html css scolaire`,
 		skills: `travail-d'équipe 
 		design-site-web`,
@@ -169,6 +203,10 @@ const data = [
 	{
 		title: `Veille Info Bot`,
 		imgUrl: `img/Projet/Projet8.PNG`,
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `python tkinter api personnel`,
 		skills: `travail-d'équipe
 		découverte-nouvelle-technologie`,
@@ -183,6 +221,10 @@ const data = [
 	{
 		title: `Api Pizzeria`,
 		imgUrl: `img/Projet/Projet9.png`,
+		type: '',
+		languages: '',
+		tools: '',
+		others: '',
 		technos: `java tomcat api scolaire`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
