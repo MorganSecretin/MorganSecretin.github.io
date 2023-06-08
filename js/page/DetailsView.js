@@ -9,8 +9,6 @@ export default class DetailsView extends View {
 			.then(response => response.text())
 			.then(responseText => {
 				this.showFileContent(responseText);
-				// TEMPO
-				Router.navigate('/details');
 			});
 	}
 
