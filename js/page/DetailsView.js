@@ -15,8 +15,14 @@ export default class DetailsView extends View {
 	renderProjectDetails() {
 		data.forEach(project => {
 			if (project.active == true) {
+				let linkFirst = '';
+				if (project.link.length > 0) {
+					linkFirst = 'Lien :';
+				}
+
 				this.element.querySelector('h2').innerHTML = project.title;
 				this.element.querySelector('img').src = project.imgUrl;
+				this.element.querySelector('.linkFirst').innerHTML = linkFirst;
 				this.element.querySelector('a').href = project.link;
 				this.element.querySelector('a').innerHTML = project.titleLink;
 				this.element.querySelector('p').innerHTML = project.bigDescription;

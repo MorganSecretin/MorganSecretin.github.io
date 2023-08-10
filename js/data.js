@@ -15,8 +15,8 @@ const data = [
 		date: `2023-04-14`,
 		littleDescription:
 			'Ce projet est un serveur en javascript pour jouer a un jeu basé sur "agar.io".',
-		link: 'http://lol',
-		titleLink: 'lol',
+		link: '',
+		titleLink: '',
 		bigDescription: `C'est un de mes projets personnels les plus
         ambitieux. J'y ai passer beaucoup d'heure en python pour arriver à
         un résultat bien avancer. Seuleument, j'ai beaucoup trop appris sur
