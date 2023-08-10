@@ -7,10 +7,25 @@
 
 .details .container {
     background-color: var(--var-color-secondary);
-    margin: auto 300px;
+    margin: auto 5rem;
+    padding-top: 10px;
 }
 .details .details_main {
     width: fit-content;
+}
+
+.backFromDetails {
+    font-family: "Russo One";
+    color: var(--var-color-secondary);
+	background-color: brown;
+	border-radius: 10px;
+	border: black 3px solid;
+	padding: 3px;
+	text-decoration: none;
+}
+
+.backFromDetails:hover {
+    font-size: 18px;
 }
 
 .details_left img {
@@ -26,4 +41,11 @@
     max-width: 40%;
     text-align: left;
     font-size: var(--var-font-size-text);
+}
+
+@media (max-width: 900px) {
+    .details_left , .details_right {
+        display: block;
+        margin: auto;
+    }
 }

@@ -20,15 +20,28 @@ export default class DetailsView extends View {
 					linkFirst = 'Lien :';
 				}
 
-				this.element.querySelector('h2').innerHTML = project.title;
+				this.element.querySelector('h2').innerHTML =
+					project.title + ' (' + project.type.description + ')';
 				this.element.querySelector('img').src = project.imgUrl;
 				this.element.querySelector('.linkFirst').innerHTML = linkFirst;
-				this.element.querySelector('a').href = project.link;
-				this.element.querySelector('a').innerHTML = project.titleLink;
+				this.element.querySelector('.linkDetails').href = project.link;
+				this.element.querySelector('.linkDetails').innerHTML =
+					project.titleLink;
 				this.element.querySelector('p').innerHTML = project.bigDescription;
 
+				this.initButton();
 				this.initList(project);
 			}
+		});
+	}
+
+	initButton() {
+		const back = this.element.querySelector('.backFromDetails');
+		back.addEventListener('click', event => {
+			event.preventDefault();
+
+			// Changement page
+			Router.navigate('/projects');
 		});
 	}
 
