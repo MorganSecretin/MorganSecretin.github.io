@@ -19,7 +19,7 @@ export default function renderProjectThumbnail({
         <a class="${title.replaceAll(
 					' ',
 					'-'
-				)}" href="/details">Détails</a> <br>
+				)} detailsButton" href="/details">Détails</a> <br>
     </div>
 </div>`;
 }

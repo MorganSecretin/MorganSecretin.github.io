@@ -110,6 +110,7 @@ export default class ProjectsView extends View {
 
 		// parcours du tableau + génération du code HTML de la projectList
 		let html = '';
+
 		data
 			.filter(project =>
 				project.title.toLowerCase().includes(search.toLowerCase())
@@ -150,10 +151,18 @@ export default class ProjectsView extends View {
 				});
 				return valid;
 			}) // other
-			.sort(sortingFunction) // tri
-			.forEach(project => {
-				html += renderProjectThumbnail(project);
-			}); // génération du HTML
+			.sort(sortingFunction); // tri
+
+		let pair = true;
+
+		data.forEach(project => {
+			if (pair) {
+				html += '<div class="doubleProject">' + renderProjectThumbnail(project);
+			} else {
+				html += renderProjectThumbnail(project) + '</div>';
+			}
+			pair = !pair;
+		}); // génération du HTML
 
 		// maj de la page HTML
 		this.element.querySelector('.result').innerHTML = html;

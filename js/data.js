@@ -5,10 +5,10 @@ const data = [
 		title: 'agar.IUT',
 		imgUrl: 'img/Projet/Projet10.PNG',
 		type: TypeProject.SCOLAIRE,
-		languages: 'typescript',
-		tools: 'git',
-		others: 'node babel',
-		technos: `    `,
+		languages: '',
+		tools: '',
+		others: '',
+		technos: `typescript git node babel`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
@@ -17,24 +17,17 @@ const data = [
 			'Ce projet est un serveur en javascript pour jouer a un jeu basé sur "agar.io".',
 		link: '',
 		titleLink: '',
-		bigDescription: `C'est un de mes projets personnels les plus
-        ambitieux. J'y ai passer beaucoup d'heure en python pour arriver à
-        un résultat bien avancer. Seuleument, j'ai beaucoup trop appris sur
-        la programmation ce qui ma obligé à recommencer ce code plusieurs
-        fois. Au final, j'ai décidé de le passer dans une version java avec
-        la bibliothéque JavaFX. Cela me permet d'apprendre par moi même
-        dans un logiciel qui un jour pourrai vraiment servir. La version
-        java est toujours en cours sur GitHub.`,
+		bigDescription: `TXT`,
 		active: true,
 	},
 	{
 		title: 'Tutorat',
 		imgUrl: 'img/Projet/Projet6.jpg',
-		type: '',
+		type: TypeProject.SCOLAIRE,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `java javafx json git scolaire`,
+		technos: `java javafx json git`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
@@ -54,11 +47,11 @@ const data = [
 	{
 		title: 'Classification',
 		imgUrl: 'img/Projet/Projet7.jpg',
-		type: '',
+		type: TypeProject.SCOLAIRE,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `java javafx csv git scolaire`,
+		technos: `java javafx csv git`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
@@ -82,11 +75,11 @@ const data = [
 	{
 		title: 'CHESSCAPE',
 		imgUrl: 'img/Projet/Projet1.png',
-		type: '',
+		type: TypeProject.SCOLAIRE,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `java agile git scolaire`,
+		technos: `java agile git`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
@@ -108,11 +101,11 @@ const data = [
 	{
 		title: `SMM: Safe Money Manager`,
 		imgUrl: `img/Projet/Projet3.JPG`,
-		type: '',
+		type: TypeProject.PERSONNEL,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `python pygame personnel`,
+		technos: `python pygame`,
 		skills: `déploiement-d'application`,
 		date: `2020-10-01`,
 		littleDescription: `J'ai pour objectif de créér un gestionnaire de compte.`,
@@ -131,11 +124,11 @@ const data = [
 	{
 		title: `PCDD`,
 		imgUrl: `img/Projet/Projet4.JPG`,
-		type: '',
+		type: TypeProject.PERSONNEL,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `python cryptage personnel`,
+		technos: `python cryptage`,
 		skills: `algorithmie interface`,
 		date: `2021-03-13`,
 		littleDescription: `PCDD est un logiciel de cryptage de mot de passe en Python.`,
@@ -151,11 +144,11 @@ const data = [
 	{
 		title: `Escape Game Passengers`,
 		imgUrl: `img/Projet/Projet5.JPG`,
-		type: '',
+		type: TypeProject.SCOLAIRE,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `genially trello scolaire`,
+		technos: `genially trello`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
@@ -176,11 +169,11 @@ const data = [
 	{
 		title: `Use Heat`,
 		imgUrl: `img/Projet/Projet2.JPG`,
-		type: '',
+		type: TypeProject.SCOLAIRE,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `html css scolaire`,
+		technos: `html css`,
 		skills: `travail-d'équipe 
 		design-site-web`,
 		date: `2021-10-08`,
@@ -203,11 +196,11 @@ const data = [
 	{
 		title: `Veille Info Bot`,
 		imgUrl: `img/Projet/Projet8.PNG`,
-		type: '',
+		type: TypeProject.PERSONNEL,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `python tkinter api personnel`,
+		technos: `python tkinter api`,
 		skills: `travail-d'équipe
 		découverte-nouvelle-technologie`,
 		date: `2023-01-10`,
@@ -221,11 +214,11 @@ const data = [
 	{
 		title: `Api Pizzeria`,
 		imgUrl: `img/Projet/Projet9.png`,
-		type: '',
+		type: TypeProject.SCOLAIRE,
 		languages: '',
 		tools: '',
 		others: '',
-		technos: `java tomcat api scolaire`,
+		technos: `java tomcat api`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
