@@ -79,6 +79,10 @@ body>header .navBar .active {
 }
 
 @media (max-width:500px){
+    body>header {
+        padding-top: 20px;
+    }
+
     body>header nav>a {
         display: block;
         height: 18%;
