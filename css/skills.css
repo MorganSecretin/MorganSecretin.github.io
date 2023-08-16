@@ -1,8 +1,6 @@
 /*Compétences*/
 .skills {
-    background-image: url("../img/Fond/fondNum4.jpg");
-    background-attachment: fixed;
-    background-size: cover;
+    background : linear-gradient(25deg,#4ab7bb,#06565a 90%);
     text-align: center;
 }
 
@@ -21,6 +19,7 @@
     vertical-align: top;
     background-color: var(--var-color-tertiary);
     border-radius: 15px;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.5);
     padding: 10px;
     padding-bottom: 2px;
     /*H D B G*/

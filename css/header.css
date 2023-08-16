@@ -5,7 +5,7 @@ body>header {
     background-color: var(--var-color-tr-primary);
     width: 100%;
     height: fit-content;
-    border-bottom: 2px solid grey;
+    /*border-bottom: 2px solid grey;*/
     /* (H) (D) (B) (G)*/ /* (H B) (G D) */ /* (H B G D) */
     padding: 0px;
     justify-content: center;
@@ -25,7 +25,6 @@ body>header nav {
 }
 
 body>header nav>a {
-    font-family: 'Russo One', sans-serif;
     display: inline-block;
     color: var(--var-color-tertiary);
     text-decoration: none;

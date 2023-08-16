@@ -1,8 +1,6 @@
 /*A propos*/
 .about {
-    background-image: url("../img/Fond/fondBureau.jpg");
-    background-attachment: fixed;
-    background-size: cover;
+    background : linear-gradient(25deg,#e2b26a,#855528 90%);
     padding: 5% 15%;
 }
 
@@ -40,6 +38,7 @@
     margin-bottom: 0px;
     margin-right: auto;
     margin-left: auto;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.5);
 }
 
 .about>pre>a {

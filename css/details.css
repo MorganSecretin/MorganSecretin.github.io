@@ -1,7 +1,5 @@
 .details {
-    background-image: url("../img/Fond/fondBois1.jpg");
-    background-attachment: fixed;
-    background-size: 100% 100vh;
+    background : linear-gradient(25deg,#ff8800,#693800 90%);
     text-align: center;
 }
 
@@ -15,7 +13,6 @@
 }
 
 .backFromDetails {
-    font-family: "Russo One";
     color: var(--var-color-secondary);
 	background-color: brown;
 	border-radius: 10px;
