@@ -61,12 +61,16 @@ export default class ProjectsView extends View {
 
 				divText.classList.add('hideSlow');
 				projectDiv.addEventListener('mouseover', event => {
-					divText.classList.remove('hideSlow');
-					divText.classList.add('showSlow');
+					if (window.screen.width > 500) {
+						divText.classList.remove('hideSlow');
+						divText.classList.add('showSlow');
+					}
 				});
 				projectDiv.addEventListener('mouseout', event => {
-					divText.classList.remove('showSlow');
-					divText.classList.add('hideSlow');
+					if (window.screen.width > 500) {
+						divText.classList.remove('showSlow');
+						divText.classList.add('hideSlow');
+					}
 				});
 			});
 		} else {
