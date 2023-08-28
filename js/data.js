@@ -5,19 +5,26 @@ const data = [
 		title: 'agar.IUT',
 		imgUrl: 'img/Projet/Projet10.PNG',
 		type: TypeProject.SCOLAIRE,
-		languages: '',
+		languages: 'javascript, typescript, html, css',
 		tools: '',
 		others: '',
-		technos: `typescript git node babel`,
+		technos: `git node babel`,
 		skills: `travail-d'équipe 
 		découverte-nouvelle-technologie 
 		déploiement-d'application`,
 		date: `2023-04-14`,
-		littleDescription:
-			'Ce projet est un serveur en javascript pour jouer a un jeu basé sur "agar.io".',
+		littleDescription: `Ce projet est un serveur en javascript pour jouer 
+						à un jeu basé sur "agar.io". `,
 		link: '',
 		titleLink: '',
-		bigDescription: `TXT`,
+		bigDescription: `En groupe de 3, nous avons 
+		recréé le jeu à partir de zéro pour apprendre javascript, 
+		typescript et le système de serveur. Nous avons utilisé 
+		une configuration complexe afin que le projet soit le plus 
+		maintenable possible. Cela grâce à Babel.rc, package.json, 
+		webpack.config.json et à socket.io. J'ai appris beaucoup 
+		de chose durant ce projet et il m'a d'ailleurs inspiré 
+		un projet en stage de site internet.`,
 		active: true,
 	},
 	{
@@ -197,10 +204,10 @@ const data = [
 		title: `Veille Info Bot`,
 		imgUrl: `img/Projet/Projet8.PNG`,
 		type: TypeProject.PERSONNEL,
-		languages: '',
+		languages: 'python',
 		tools: '',
 		others: '',
-		technos: `python tkinter api`,
+		technos: `tkinter api`,
 		skills: `travail-d'équipe
 		découverte-nouvelle-technologie`,
 		date: `2023-01-10`,
@@ -208,7 +215,11 @@ const data = [
 		utilisant une API afin de faire de la veille informatique.`,
 		link: `https://github.com/SolaireFR/VeilleInfoBot`,
 		titleLink: `Voir le depot`,
-		bigDescription: `TXT`,
+		bigDescription: `C'est un projet personnel qui m'a permis d'en 
+					apprendre plus sur l'utilisation des APIs dans du code.
+					Il avait pour but de me fournir les différentes news en
+					informatique pour faire de la veille. Je ne l'ai pas terminé 
+					ayant découvert d'autres sources plus interéssantes.`,
 		active: false,
 	},
 	{
@@ -227,7 +238,12 @@ const data = [
 		avec des get, post, delete, et autres avec le serveur tomcat.`,
 		link: ``,
 		titleLink: ``,
-		bigDescription: `TXT`,
+		bigDescription: `C'est un projet qui m'a permis d'en apprendre beaucoup 
+					sur le système de base de données en API rest.
+					Il a été réalisé en binome. J'ai pu réalisé un exellent travail
+					avec mon partenaire car nous nous sommes extrêmement bien réparti
+					les tâches et nous avons tous deux progréssés. La découverte de
+					tomcat et très intérréssantes et utile pour un serveur en java.`,
 		active: false,
 	},
 ];
