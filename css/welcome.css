@@ -1,6 +1,8 @@
 /*welcome*/
 .welcome {
-    background : linear-gradient(25deg,#40baf2,#153849 90%);
+    /*background : linear-gradient(25deg,#40baf2,#153849 90%);
+    background : linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);*/
+    background: radial-gradient(circle, #40baf2, #37a8dd, #2e97c9, #2586b5, #1b75a1);
     height: 100vh;
 }
 

@@ -21,7 +21,6 @@ const welcomeView = new WelcomeView(document.querySelector('.welcome')),
 
 // mise en place du Router
 const routes = [
-	{ path: '/', view: welcomeView },
 	{ path: '/welcome', view: welcomeView },
 	{ path: '/about', view: aboutView },
 	{ path: '/skills', view: skillsView },
@@ -35,6 +34,6 @@ Router.routes = routes;
 Router.setMenuElement(document.querySelector('body>header nav'));
 
 // chargement de la vue initiale selon l"URL demandée par l"utilisateur.rice (Deep linking)
-Router.navigate('/');
+Router.navigate('/welcome');
 
 console.log('Tout Fonctionne');
