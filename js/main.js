@@ -33,6 +33,14 @@ Router.routes = routes;
 // gestion des liens du menu (détection du clic et activation/désactivation)
 Router.setMenuElement(document.querySelector('body>header nav'));
 
+// Inititialisation des copier dans le press papier
+var telephone = document.querySelector(".contacter_div_copy_link");
+telephone.addEventListener('click', (event) => {
+	event.preventDefault();
+	navigator.clipboard.writeText("0644043059");
+	alert("copie de 06.44.04.30.59");
+});
+
 // chargement de la vue initiale selon l"URL demandée par l"utilisateur.rice (Deep linking)
 Router.navigate('/welcome');
 

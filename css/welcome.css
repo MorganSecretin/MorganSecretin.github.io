@@ -1,24 +1,46 @@
+
+/*background: radial-gradient(ellipse at center, #220000 0%, #110000 50%, #220000 100%);*/
 /*welcome*/
 .welcome {
-    /*background : linear-gradient(25deg,#40baf2,#153849 90%);
-    background : linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);*/
+    /*background: radial-gradient(ellipse at center, aqua 0%, aqua 50%, aqua 100%);*/
+    overflow: hidden;
     background: radial-gradient(circle, #40baf2, #37a8dd, #2e97c9, #2586b5, #1b75a1);
-    min-height: 100vh;
+    min-height: 100vh; /* 100% hauteur ecran*/
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
+    padding: 0px;
+    padding-top: 0px !important;
+}
+
+#bg {
+    overflow: hidden;
+    position: absolute;
+}
+.welcome svg polygon{
+    transition: 1.5s all;
 }
 
 .welcomeDiv {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 50%; max-height: 80vh;
-    align-items: baseline;
-    min-width: 360px;
+    z-index: 1;
+    width: 50%;
+    margin-top: 8%;
+}
+
+.welcomeDiv h1 {
+    min-width: max-content;
+    font-family: "Russo One";
+    font-style: italic;
+    text-decoration: underline;
+    color: var(--var-color-tr-primary);
+    font-weight: 500;
+    font-size: 3vw;
 }
 
 .welcomeDivText {
     background-color: lightblue;
-    max-width: 400px;
+    max-width: 80%;
+    width: fit-content;
     font-size: var(--var-font-size-header);
     font-weight: bold;
     padding: 20px;
@@ -35,9 +57,11 @@
     margin: 5px;
 }
 
-.welcome>img {
+.welcome img {
+    margin-top: 8%;
+    z-index: 1;
     vertical-align: top;
-    max-height: 80vh;
+    max-height: 80vh; /* 80% hauteur ecran */
     max-width: 100%;
     border-bottom: 6px black solid;
     border-radius: 20px;
@@ -46,15 +70,19 @@
 .typewriter {
     display: flex;
     flex-wrap: wrap;
+    min-width: max-content;
 }
 
-.typewriter>div {
-    z-index: 1;
+#laserHolder, #laserLight {
     position: absolute;
-    height: 70px;
+    z-index: 1;
+    animation: moveRight 3.1s linear 0.3s forwards, leave 3s linear 2.9s forwards;
     width: 5px;
+}
+
+#laserLight {
+    height: 70px;
     background-color: red;
-    animation: moveRight 4.5s linear 0.3s forwards, leave 3s linear 4.3s forwards;
     box-shadow: 0px 0px 15px 5px red;
 }
 
@@ -89,7 +117,7 @@
 
 .firstname, .surname {
     width: fit-content;
-    min-width: fit-content;
+    min-width: max-content;
 }
 
 .surname {
@@ -111,48 +139,54 @@
         opacity: 1;
     }
 }
-
 .firstname span:nth-child(1) {
     animation-delay: 0.5s;
 }
 .firstname span:nth-child(2) {
-    animation-delay: 0.8s;
+    animation-delay: 0.7s;
 }
 .firstname span:nth-child(3) {
-    animation-delay: 1.1s;
+    animation-delay: 0.9s;
 }
 .firstname span:nth-child(4) {
-    animation-delay: 1.4s;
+    animation-delay: 1.1s;
 }
 .firstname span:nth-child(5) {
-    animation-delay: 1.7s;
+    animation-delay: 1.3s;
 }
 .firstname span:nth-child(6) {
-    animation-delay: 2s;
+    animation-delay: 1.5s;
 }
 .surname span:nth-child(1) {
-    animation-delay: 2.4s;
+    animation-delay: 1.7s;
 }
 .surname span:nth-child(2) {
-    animation-delay: 2.7s;
+    animation-delay: 1.9s;
 }
 .surname span:nth-child(3) {
-    animation-delay: 3.0s;
+    animation-delay: 2.1s;
 }
 .surname span:nth-child(4) {
-    animation-delay: 3.3s;
+    animation-delay: 2.3s;
 }
 .surname span:nth-child(5) {
-    animation-delay: 3.6s;
+    animation-delay: 2.5s;
 }
 .surname span:nth-child(6) {
-    animation-delay: 3.9s;
+    animation-delay: 2.7s;
 }
 .surname span:nth-child(7) {
-    animation-delay: 4.2s;
+    animation-delay: 2.9s;
 }
 .surname span:nth-child(8) {
-    animation-delay: 4.5s;
+    animation-delay: 3.1s;
+}
+
+.allLine {
+    width: 100%;
+    position: absolute;
+    border: var(--var-color-primary) 3px solid;
+    margin-top: 100vh;
 }
 
 @media (max-width: 1150px) {
@@ -168,16 +202,48 @@
 @media (max-width: 1000px) {
     
     .welcomeDivText {
-        font-size: 3vw;
+        font-size: 2vw;
     }
     
     .welcome img {
         margin-top: 50px;
         height: 70%;
     }
+}
 
-    .welcome svg {
-        width: 100%; height: 20%;
+@media (max-width: 900px) {
+    .welcome {
+        text-align: center;
+    }
+
+    .welcomeDiv {
+        padding: auto;
+        margin-top: 15vh;
+        min-width: 90%;
+    }
+
+    .welcomeDivText {
+        font-size: 3vw;
+        min-width: 90%;
+    }
+
+    .welcome h1 {
+        font-size: 5vw;
+    }
+
+    .typewriter span {
+        font-size: 6vw;
+    }
+    @keyframes moveRight {
+        0% {
+            transform: translateX(0);
+        }
+        46% {
+            transform: translateX(30vw);
+        }
+        100% {
+            transform: translateX(70vw);
+        }
     }
 }
 
@@ -187,16 +253,21 @@
     }
 
     .welcomeDiv {
-        flex-direction: column-reverse;
+        max-height: fit-content;
+        margin-top: 40%;
+        min-width: 90%;
     }
 
     .welcomeDivText {
+        height: fit-content;
         width: 95%;
-        font-size: 6vw;
+        font-size: 4vw;
+        min-width: 90%;
     }
 
     .typewriter {
         width: 70vw;
+        min-width: 0px;
     }
 
     .surname {
@@ -211,29 +282,17 @@
         font-size: 12vw;
     }
 
+    .welcome h1 {
+        min-width: 0px;
+    }
+
     .welcome img {
         height: 60%;
-    }
-
-    .welcome svg {
-        width: 100%; height: 10%;
-    }
-
-    .welcome svg>text {
-        font-size: 15vh;
     }
 }
 
 @media (max-width: 300px) {
-    .welcomeDiv {
-        min-width: 90%;
-    }
-
     .typewriter span {
         font-size: 10vw;
-    }
-
-    .welcomeDivText {
-        max-width: 90%;
     }
 }

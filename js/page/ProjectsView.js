@@ -15,7 +15,7 @@ export default class ProjectsView extends View {
 				window.addEventListener('resize', event => {
 					this.chooseAnimation();
 				});
-				this.initFilterToggler();
+				//this.initFilterToggler();
 			});
 	}
 
@@ -77,8 +77,8 @@ export default class ProjectsView extends View {
 			this.element.querySelectorAll('.project_div').forEach(projectDiv => {
 				const divText = projectDiv.querySelector('.project_div_text');
 
-				projectDiv.addEventListener('mouseover', event => {});
-				projectDiv.addEventListener('mouseout', event => {});
+				projectDiv.addEventListener('mouseover', event => { });
+				projectDiv.addEventListener('mouseout', event => { });
 				divText.classList.remove('hideSlow');
 				divText.classList.remove('showSlow');
 			});
@@ -90,10 +90,10 @@ export default class ProjectsView extends View {
 		this.renderProjectList();
 
 		// détection de la soumission du formulaire de recherche
-		this.searchForm = this.element.querySelector('.searchForm');
+		/*this.searchForm = this.element.querySelector('.searchForm');
 		this.searchForm.addEventListener('submit', event =>
 			this.handleSearchFormSubmit(event)
-		);
+		);*/
 	}
 
 	renderProjectList(
@@ -105,58 +105,59 @@ export default class ProjectsView extends View {
 		ordering
 	) {
 		// calcul de la fonction de tri selon le paramètre ordering
-		let sortingFunction;
+		/*let sortingFunction;
 		if (ordering == '-dateDown') {
 			sortingFunction = (a, b) => b.date.localeCompare(a.date);
 		} else if (ordering == '-dateUp') {
 			sortingFunction = (a, b) => a.date.localeCompare(b.date);
 		}
 
+		*/
 		// parcours du tableau + génération du code HTML de la projectList
 		let html = '';
-
-		data
-			.filter(project =>
-				project.title.toLowerCase().includes(search.toLowerCase())
-			) // recherche
-			.filter(project => {
-				let valid = false;
-				technos.split(' ').forEach(techno => {
-					if (project.technos.toLowerCase().includes(techno.toLowerCase())) {
-						valid = true;
-					}
-				});
-				return valid;
-			}) // type
-			.filter(project => {
-				let valid = false;
-				languages.split(' ').forEach(language => {
-					if (project.technos.toLowerCase().includes(language.toLowerCase())) {
-						valid = true;
-					}
-				});
-				return valid;
-			}) // langage
-			.filter(project => {
-				let valid = false;
-				apps.split(' ').forEach(app => {
-					if (project.technos.toLowerCase().includes(app.toLowerCase())) {
-						valid = true;
-					}
-				});
-				return valid;
-			}) // app
-			.filter(project => {
-				let valid = false;
-				others.split(' ').forEach(other => {
-					if (project.technos.toLowerCase().includes(other.toLowerCase())) {
-						valid = true;
-					}
-				});
-				return valid;
-			}) // other
-			.sort(sortingFunction); // tri
-
+		/*
+				data
+					.filter(project =>
+						project.title.toLowerCase().includes(search.toLowerCase())
+					) // recherche
+					.filter(project => {
+						let valid = false;
+						technos.split(' ').forEach(techno => {
+							if (project.technos.toLowerCase().includes(techno.toLowerCase())) {
+								valid = true;
+							}
+						});
+						return valid;
+					}) // type
+					.filter(project => {
+						let valid = false;
+						languages.split(' ').forEach(language => {
+							if (project.technos.toLowerCase().includes(language.toLowerCase())) {
+								valid = true;
+							}
+						});
+						return valid;
+					}) // langage
+					.filter(project => {
+						let valid = false;
+						apps.split(' ').forEach(app => {
+							if (project.technos.toLowerCase().includes(app.toLowerCase())) {
+								valid = true;
+							}
+						});
+						return valid;
+					}) // app
+					.filter(project => {
+						let valid = false;
+						others.split(' ').forEach(other => {
+							if (project.technos.toLowerCase().includes(other.toLowerCase())) {
+								valid = true;
+							}
+						});
+						return valid;
+					}) // other
+					.sort(sortingFunction); // tri
+					*/
 		let pair = true;
 
 		data.forEach(project => {
@@ -175,7 +176,7 @@ export default class ProjectsView extends View {
 		this.chooseAnimation();
 	}
 
-	handleSearchFormSubmit(event) {
+	/*handleSearchFormSubmit(event) {
 		event.preventDefault();
 		const searchInput = this.searchForm.querySelector('[name=search]'),
 			orderingSelect = this.searchForm.querySelector('[name=ordering]'),
@@ -242,7 +243,7 @@ export default class ProjectsView extends View {
 
 	renderTechnoOption(techno) {
 		return `
-        <option value="${techno}">${techno}</option>
-        `;
-	}
+		<option value="${techno}">${techno}</option>
+		`;
+}*/
 }
