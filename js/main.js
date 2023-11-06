@@ -37,8 +37,21 @@ Router.setMenuElement(document.querySelector('body>header nav'));
 var telephone = document.querySelector(".contacter_div_copy_link");
 telephone.addEventListener('click', (event) => {
 	event.preventDefault();
-	navigator.clipboard.writeText("0644043059");
-	alert("copie de 06.44.04.30.59");
+
+	// Get the text field
+	var copyText = "0644043059";
+	var input = document.createElement("input");
+	input.value = copyText;
+
+	// Select the text field
+	input.select();
+	input.setSelectionRange(0, 99999); // For mobile devices
+
+	// Copy the text inside the text field
+	navigator.clipboard.writeText(input.value);
+
+	// Alert the copied text
+	alert("Copied the text: " + input.value);
 });
 
 // chargement de la vue initiale selon l"URL demandée par l"utilisateur.rice (Deep linking)
