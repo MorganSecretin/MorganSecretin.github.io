@@ -37,7 +37,9 @@ Router.setMenuElement(document.querySelector('body>header nav'));
 var telephone = document.querySelector(".contacter_div_copy_link");
 telephone.addEventListener('click', (event) => {
 	event.preventDefault();
-
+	/*
+	new Clipboard('#btnCopyToClipboard');
+	*/
 	// Get the text field
 	var copyText = "0644043059";
 	var input = document.createElement("input");
