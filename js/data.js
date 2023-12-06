@@ -80,6 +80,31 @@ const data = [
 		active: false,
 	},
 	{
+		title: `aSize : analize de dossier`,
+		imgUrl: `img/Projet/Projet11.PNG`,
+		type: TypeProject.PERSONNEL,
+		languages: 'python',
+		tools: 'vscode',
+		others: '',
+		technos: `Aucune`,
+		skills: `déploiement-d'application
+				découverte-nouvelle-bibliothéque
+				auto-formation`,
+		date: `2023-11-29`,
+		littleDescription: `J'avais un besoin, donc j'ai créé une application pour analiser 
+							la taille des fichiers et sous dossier du repertoire.`,
+		link: `https://drive.google.com/file/d/1YV8chwSamnhClYdkajSLuBPIWv5otNPT/view?usp=sharing`,
+		titleLink: `Télécharger aSize.exe`,
+		bigDescription: `J'avais mon disque C: qui étais plein sur mon ordinateur. 
+						J'ai donc développé un logiciel en python afin de pouvoir avoir 
+						un apperçu de tout les fichiers et dossier supérieur à une 
+						taille donné. Cela permet d'avoir un visuel sur tout ce qui 
+						prend de la place dans le répertoire. Cela m'a permis de 
+						découvrir des bibliothéque python très intérrésante et de 
+						mettre en pratique mes connaissance en algorithmie.`,
+		active: false,
+	},
+	{
 		title: 'CHESSCAPE',
 		imgUrl: 'img/Projet/Projet1.png',
 		type: TypeProject.SCOLAIRE,
