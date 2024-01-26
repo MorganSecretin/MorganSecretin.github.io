@@ -2,6 +2,75 @@ import TypeProject from './TypeProject.js';
 
 const data = [
 	{
+		title: 'aSize',
+		imgUrl: 'img/Projet/Projet11.JPG',
+		type: TypeProject.PERSONNEL,
+		languages: 'python',
+		tools: 'vscode',
+		others: '',
+		technos: `os 
+		matplotlib.colors 
+		LinearSegmentedColormap 
+		tkinter 
+		PIL 
+		threading 
+		copy 
+		time 
+		subprocess 
+		traceback 
+		re`,
+		skills: `déploiement-d'application
+				découverte-nouvelle-bibliothéque
+				auto-formation`,
+		date: `2024-01-25`,
+		littleDescription: `Ce logiciel a pour but d'analiser et d'afficher la 
+							taille des éléments de l'arborescense d'un repertoire choisi.`,
+		link: `https://drive.google.com/file/d/1PwqRO_XRj2TQTO80LoRlqUs4_9yZNoIr/view?usp=sharing`,
+		titleLink: `Télécharger aSize.exe`,
+		bigDescription: `J'avais mon disque C: qui étais plein sur mon ordinateur. 
+		J'ai donc développé un logiciel en python afin de pouvoir avoir 
+		un apperçu de tout les fichiers et dossier supérieur à une 
+		taille donné. Cela permet d'avoir un visuel sur tout ce qui 
+		prend de la place dans le répertoire. Cela m'a permis de 
+		découvrir des bibliothéque python très intérrésante et de 
+		mettre en pratique mes connaissance en algorithmie.`,
+		active: true,
+	},
+	{
+		title: 'TimePlanner',
+		imgUrl: 'img/Projet/Projet12.JPG',
+		type: TypeProject.SCOLAIRE,
+		languages: 'Java',
+		tools: '',
+		others: '',
+		technos: ``,
+		skills: ``,
+		date: ``,
+		littleDescription: `Site de gestion de planning entre clients et 
+							services.`,
+		link: ``,
+		titleLink: ``,
+		bigDescription: ``,
+		active: true,
+	},
+	{
+		title: 'Jeu CPU',
+		imgUrl: 'img/Projet/Projet13.JPG',
+		type: TypeProject.SCOLAIRE,
+		languages: 'Golang',
+		tools: '',
+		others: '',
+		technos: ``,
+		skills: ``,
+		date: ``,
+		littleDescription: `Conception complexe d'un Processeur en Golang pour 
+							réaliser un jeu entre plusieurs CPU.`,
+		link: ``,
+		titleLink: ``,
+		bigDescription: ``,
+		active: true,
+	},
+	{
 		title: 'agar.IUT',
 		imgUrl: 'img/Projet/Projet10.PNG',
 		type: TypeProject.SCOLAIRE,
@@ -77,31 +146,6 @@ const data = [
 					kNN obtient de faibles résultats). La difficulté de ce projet a été de 
 					faire en sorte que le programme soit générique et que les données soient 
 					le moins possible affichées par du code en dur.`,
-		active: false,
-	},
-	{
-		title: `aSize : analize de dossier`,
-		imgUrl: `img/Projet/Projet11.PNG`,
-		type: TypeProject.PERSONNEL,
-		languages: 'python',
-		tools: 'vscode',
-		others: '',
-		technos: `Aucune`,
-		skills: `déploiement-d'application
-				découverte-nouvelle-bibliothéque
-				auto-formation`,
-		date: `2023-11-29`,
-		littleDescription: `J'avais un besoin, donc j'ai créé une application pour analiser 
-							la taille des fichiers et sous dossier du repertoire.`,
-		link: `https://drive.google.com/file/d/1YV8chwSamnhClYdkajSLuBPIWv5otNPT/view?usp=sharing`,
-		titleLink: `Télécharger aSize.exe`,
-		bigDescription: `J'avais mon disque C: qui étais plein sur mon ordinateur. 
-						J'ai donc développé un logiciel en python afin de pouvoir avoir 
-						un apperçu de tout les fichiers et dossier supérieur à une 
-						taille donné. Cela permet d'avoir un visuel sur tout ce qui 
-						prend de la place dans le répertoire. Cela m'a permis de 
-						découvrir des bibliothéque python très intérrésante et de 
-						mettre en pratique mes connaissance en algorithmie.`,
 		active: false,
 	},
 	{
