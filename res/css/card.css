@@ -1,0 +1,167 @@
+/* CARDS */
+/* Grid System */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-6 {
+    position: relative;
+    width: 500px;
+    margin-inline: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Card Component */
+/* Card Deck */
+.card-deck {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.card-deck .card {
+    margin-bottom: 15px;
+    flex: 1 0 0%;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Card Component */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+@media (max-width: 500px) {
+    .card {
+        font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 25px !important;
+    }
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.card-text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+}
+
+.list-group-flush .list-group-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    object-fit: cover;
+}
+
+.col {
+    margin-bottom: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-grow: 1;
+    /* Fait en sorte que chaque colonne se développe pour prendre l'espace disponible */
+    flex-basis: 90%;
+    /* Chaque colonne commence avec 100% de largeur jusqu'à ce que l'écran atteigne un certain seuil */
+}
+
+@media (min-width: 576px) {
+    .col-sm {
+        flex-basis: 50%;
+        /* A partir de 576px, chaque colonne prend 50% de la largeur, donc 2 colonnes par ligne */
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md {
+        flex-basis: 33.333%;
+        /* A partir de 768px, chaque colonne prend environ 33%, donc 3 colonnes par ligne */
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg {
+        flex-basis: 25%;
+        /* A partir de 992px, chaque colonne prend 25%, donc 4 colonnes par ligne */
+    }
+}
+/******************************************/

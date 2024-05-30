@@ -1,89 +1,556 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <!-- META -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- DETAILS -->
-        <link rel="shortcut icon" href="img\Icone\LogoMorganSecretin.ico" type="image/x-icon">
-        <title>Morgan Secrétin</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="./css/root.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/welcome.css">
-        <link rel="stylesheet" href="./css/about.css">
-        <link rel="stylesheet" href="./css/skills.css">
-        <link rel="stylesheet" href="./css/career.css">
-        <link rel="stylesheet" href="./css/projects.css">
-        <link rel="stylesheet" href="./css/details.css">
-        <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./res/css/root.css">
+    <link rel="stylesheet" href="./res/css/style.css">
+    <link rel="stylesheet" href="./res/css/card.css">
+    <link rel="stylesheet" href="./res/css/navbar.css">
 
-        <!-- JS -->
-        <script src="build/main.bundle.js" defer></script>
-    </head>
+    <script src="./res/js/main.js" defer></script>
+    <script src="./res/js/projects.js" defer></script>
+    <script src="./res/js/reduce-bootstrap.js" defer></script>
+</head>
 
-    <body>
-        <header>
-            <img class="headerImg" src="img/Icone/LogoMorganSecretin.ico" alt="">
-            <a href="/open" class="openHeader"><img src="./img/Other/OpenMenuBar2.png" alt="Ouvrir"></a>
-            <a href="/close" class="closeHeader"><img src="img/Other/CloseMenuBar2.png" alt="Fermer"></a>
-            
-            <nav class="navBar">
-                <a href="/welcome">Accueil</a> 
-                <a href="/about">A propos</a> 
-                <a href="/skills">Compétences</a>
-                <a href="/career">Parcours</a> 
-                <a href="/projects">Projets</a>
-            </nav>
-        </header>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href=""><img src="./res/img/welcome/LogoMorganSecretin.ico" width="50vh" alt="MS"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Accueil</a>
+                    <a class="nav-item nav-link" href="#about">A propos</a>
+                    <a class="nav-item nav-link" href="#skills">Compétences</a>
+                    <a class="nav-item nav-link" href="#career">Parcours</a>
+                    <a class="nav-item nav-link" href="#projects">Projets</a>
+                    <a class="nav-item nav-link" href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <section class="viewContainer">
-            <article class="welcome hide"></article>
-            <article class="about hide"></article>
-            <article class="skills hide"></article>
-            <article class="career hide"></article>
-            <article class="projects hide"></article>
-            <article class="details hide"></article>
-        </section>
+    <section id="start-pad">
+        <img id="poteau" src="./res/img/welcome/poteau.png" alt="">
+    </section>
 
-        <footer>
-            <div class="ligneblanche"></div>
-            <h1>CONTACT</h1>
-    
-            <div class="contacter_div">
-                <h5>Mail:</h5> 
+    <img id="fusee" src="./res/img/welcome/fusee.png" alt="">
+
+    <div id="infoBubble" class="info-bubble" onclick="hideBubble()">
+        <span id="bubbleText"></span>
+        <span class="buuble-close">&times;</span>
+    </div>
+
+    <div class="arrow_box"></div>
+
+    <section id="welcome">
+        <div id="bg"></div>
+
+        <div class="typewriter">
+            <p class="firstname">
+            <span>M</span>
+            <span>o</span>
+            <span>r</span>
+            <span>g</span>
+            <span>a</span>
+            <span>n</span>
+            </p>
+            <p class="surname">
+            <span>S</span>
+            <span>E</span>
+            <span>C</span>
+            <span>R</span>
+            <span>E</span>
+            <span>T</span>
+            <span>I</span>
+            <span>N</span>
+            </p>
+        </div>
+
+        <img src="./res/img/welcome/Photo-profil.png" alt="[Pas de Morgan 😢]">
+
+        <div id="about" class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Qui suis-je ?</h5>
+                        <p class="card-text">
+                            Je m'appelle Morgan Secrétin, j'ai 20 ans et je
+                            vais bientôt commencer un master Web chez Ynov
+                            Lille.
+                        </p>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Passionné d'informatique, j'aime apprendre
+                            et m'investir avec enthousiasme au sein d'une équipe.
+                        </li>
+                        <li class="list-group-item">
+                            Je maîtrise divers langages de programmation comme
+                            Java, PHP, Python, et JavaScript, ainsi que des
+                            technologies comme Docker, SQL, et Spring.
+                        </li>
+                        <li class="list-group-item">
+                            Mes intérêts incluent les projets de programmation,
+                            les jeux vidéo, le sport (tennis, badminton, babyfoot),
+                            le trekking, et les animés.
+                        </li>
+                        <li class="list-group-item">
+                            Pour mon futur master,
+                            j'ai d'ailleur trouvé une alternance dans l'entreprise
+                            IESI pour la durée de ma formation. Cela me pemettra
+                            de mettre en pratique mes compétences dans un
+                            environnement professionnel.
+                        </li>
+                    </ul>
+
+                    <div class="card-footer text-muted">
+                        N'hésitez pas à me contacter pour mieux me connaitre ^_^
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="cloud-separator">
+        <img src="./res/img/nuage.png" alt="NUAGE">
+    </div>
+
+    <section id="skills"> <!-- AJOUTER PINS COULEUR NUMERO 1->5 5==GRAND FAN 1==JE CONNAIS -->
+        <h1>Compétences</h1>
+
+        <div class="container">
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Languages informatique <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'Java a été notre principal language de programmation durant 3 ans, permettant de comprendre les bases de la programmation orientée objet en développant des applications de plus en plus complexe.')">
+                        Java <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Le langage C a été abordé lors du deuxième semestre, se concentrant sur la manipulation de la mémoire et sur les applications possibles d\'un programme en C.')">
+                        C <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Python a été utilisé dans plusieurs projets de data science et multimédia lors de la 3eme année. Nous avons utilisé des bibliothèques tel que Numpy, MatPlotLib et Pandas. Python est le language qui m\'a fait découvrir la programmation.')">
+                        Python <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'HTML a été essentiel dans le cours de développement web pour structurer les sites web. Nous avons eu l\'occasion de l\'utiliser pour de simple projet Web ainsi que pour des projets Spring, React et NodeJS')">
+                        HTML <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'CSS a complété l’apprentissage de l\'HTML en permettant de styliser les pages web lors de projets pour le développement front-end.')">
+                        CSS <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'JavaScript a été introduit par un professeur passionné qui nous à permis de faire des projets divers et variés comme \'agar.IUT\', \'Youtube.IUT\' et \'Steam.IUT\'.')">
+                        JavaScript <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Base de données <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'J\'ai travaillé pendant 2 ans sur la logique de SQL en réalisant des requêtes de plus en plus complexe. Aujourd\'hui encore, cette logique m\'aide dans la résolution de problèmes algorithmes.')">
+                        SQL <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'PostgreSQL a été la première base de données que j\'ai utilisé dans ma formation. J\'ai eu l\'occasion d\'énormement apprendre sur le SQL avec cette base.')">
+                        PostgreSQL <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Des bases simples et faciles d\'utilisations que j\'ai déjà utilisé dans divers projets d\'entreprises et personnels.')">
+                        MySQL et MariaDB <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'ai déjà réalisé divers MCD durant ma formation me permettant d\'en recréer au besoin.')">
+                        Modèle Logique de Données (MCD) <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li onclick="showBubble(this, 'Après tout, on peut stocker des données dans un fichier JSON...')">
+                        JSON <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'La première base de données NO-SQL (No Relational) que j\'ai utilisé en formation.')">
+                        MongoDB <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Je n\'ai pas beaucoup vu Cassandra et Redis mais je ne serais pas perdu si je les rencontres.')">
+                        Cassandra et Redis <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Outils et Frameworks<img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'Je l\'utilise dans casiment tous mes projets. J\'utilise notamment Github et Gitlab. Git m\'a déjà protégé de la perte de données et m\'a permis de revenir à une version fonctionnelle.')">
+                        Git <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Un IDE simple et efficace qui s\'adapte aux petits et plus gros projets.')">
+                        VS-Code <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'ai enormement apprecié utiliser Spring-boot à tel point que je suis en train de realiser une application l\'utilisant.')">
+                        Spring-boot <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Au début, durant les cours, je n\'étais pas fan de Docker mais quand j\'ai découvert son potentiel, je me suis mis à l\'utiliser dans des projets d\'entreprises et personnels.')">
+                        Docker <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'ai appris a utiliser Maven durant ma formation et je l\'utilise encore notamment dans mon projet Spring-boot. Il met très utile pour des projets de plus grosse envergure.')">
+                        Maven <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Avant de decouvrir Spring, j\'ai appris à utiliser Tomcat pour realiser des sites web en Java.')">
+                        Tomcat <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Je l\'ai principalement utilisé dans un projet de réseau pour mettre en ligne un serveur de messagerie sécurisée.')">
+                        Nginx <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'ai travaillé sur React grâce à un prof passionné qui en peu de temps m\'as fait comprendre comment et pourquoi l\'utiliser. Même si c\'est plus tard que je me suis mis a aimé le debugger ^_^')">
+                        Node.js <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Node.js a pu être vu lors des projets Agar.IUT et pour mon ancien site Web. Un professeur particulierement passionné par ses cours nous a beaucoup appris dessus.')">
+                        React <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Qualité projet <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'Les tests m\'assurent une certaine sécurité pour le code ansi que pour sa maintenance. Nous avons travaillé avec des outils comme JUnit, Cucumber et JTest.')">
+                        Test unitaire <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Je fais attention à le structure et aux regles pour que mon code soit maintenable, efficace et sécurisé pour plus tard.')">
+                        Code de qualité <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'ai compris qu\'il ne sert à rien de TOUT commenter. Moins il y a besoin de commentaire, plus le code est qualitatif. Néanmoins, je commente au possible les fonctions complexes et les objectifs de certain bout de code afin d\'assurer une compréhension rapide.')">
+                        Code commenté <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'essaye de documenter mes projets. Surtout quand la structure est complexe et qu\'il y a besoin de trouver des parties spécifiques pour tel ou tel action.')">
+                        Documentation <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'écris un maximum de procèdure quand j\'ai besoin de faire une installation sur ma machine car cela me permet de rapidement tout réinstaller si besoin et d\'autres après moi pourront facilement réinstaller les technologies nécéssaires.')">
+                        Procèdures <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'L\'envoie de rapport hebdomadaire durant mon stage a été très bénéfique. Ils permettent à moi et à mon tuteur d\'avoir un visuel sur le travail éffectuer et a faire.')">
+                        Rapports réguliers <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'La méthode Agile a été appliquée dans plusieurs projets durant ma formation. Je l\'apprecie mais la trouve aussi contraignante.')">
+                        Agile <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'ai appris la forme d\'un cycle en V mais n\'ai pas eu l\'occasion de la mettre en pratique.')">
+                        Cycle en V <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Comment suis-je ? <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'Je m\'adapte aux conversations, je suis à l\'écoute de mon entourage et je respecte TOUT mes interlocuteurs (même s\'ils ne sont pas de bonne humeur ^_^).')">
+                        Diplomate <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li onclick="showBubble(this, 'Pourquoi pas un appel ? J`\'adore parler.')">
+                        EXTRA-verti ^_^ <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'assume mes erreurs et mes difficultés. Je n\'attend pas sans rien faire.')">
+                        Honnéte ! <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Je ne me sent pas submergé par le travail et je n\'hésite à proposer des solutions à un probléme.')">
+                        Gestion du stress efficace <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li onclick="showBubble(this, '95% du temps la pêche que j\'essaye de communiquer aux autres.')">
+                        Joyeux <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li onclick="showBubble(this, 'C\'est un minimum je pense...')">
+                        Ponctuel <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Langues <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'Je travaille l\'anglais depuis plusieurs années déjà et je suis capable de tenir une conversation (avec quelque défaut certe) et j\'ai notamment appris l\'anglais technique pour l\'informatique.')">
+                        Anglais <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Langue maternelle. Je fait toujours attention quand je parle avec un interlocuteur pour garder un profond respect et une bonne entente durant une conversation. J\'essaye d\'adapter mon language technique dans une conversation.')">
+                        Francais <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="career">
+        <h1>MON PARCOURS</h1>
+
+        <ul id="timeline">
+            <li><img class="timeline-badge" src="./res/img/career/LogoYnov.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>Ynov Lille <span style="color: blue; font-weight: bold;">FORMATION</span></h3>
+                        <h2>Mastère Web</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">2 ans : 2024 -> 2026
+                        </p>
+                        <p>
+                            Je souhaite continuer ma formation pour me perfectionner en tant que
+                            développeur. Cela m'ouvrira des opportunités et me permettra d'étoffer encore
+                            la bibliothèque d'outils à ma disposition.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="panel"><img class="timeline-badge" src="./res/img/career/LogoUnivLille.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>Service Web Et Multimedia (SWEM) - Univ Lille <span
+                                style="color: orangered; font-weight: bold;">ENTREPRISE</span></h3>
+                        <h2>Stage de développeur PHP</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">17 Avril 2023 -> 23 Juin 2023
+                        </p>
+                        <p>
+                            Ce stage m'as permis d'apprendre à utiliser la version 8.1 de Php.
+                            J'ai eu l'occasion d'ajouter des plugins à un projet existant et
+                            j'ai aussi développer un site internet en Symfony. Le stage c'est super
+                            bien passé et a été une réussite.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="panel_inverted"><img class="timeline-badge" src="./res/img/career/LogoUnivLille.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>Service Web Et Multimedia (SWEM) - Univ Lille <span
+                                style="color: orangered; font-weight: bold;">ENTREPRISE</span></h3>
+                        <h2>Stage de développeur PHP</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">17 Avril 2023 -> 23 Juin 2023
+                        </p>
+                        <p>
+                            Ce stage m'as permis d'apprendre à utiliser la version 8.1 de Php.
+                            J'ai eu l'occasion d'ajouter des plugins à un projet existant et
+                            j'ai aussi développer un site internet en Symfony. Le stage c'est super
+                            bien passé et a été une réussite.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li><img class="timeline-badge" src="./res/img/career/LogoAmexio.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>AmeXio Nord <span style="color: orangered; font-weight: bold;">ENTREPRISE</span></h3>
+                        <h2>Stage</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">17 Avril 2023 -> 23 Juin 2023
+                        </p>
+                        <p>
+                            Stage sur le métier de consultant éditique. J'ai pu travailler sur du des projets
+                            fonctionnels.
+                            J'ai également pu vivre les difficultés de la gestion de projet et les solutions pour
+                            réussir son projet.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="panel"><img class="timeline-badge" src="./res/img/career/LogoIUTLille.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>IUT de Lille <span style="color: blue; font-weight: bold;">FORMATION</span></h3>
+                        <h2>BUT informatique</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">3 ans : 2021 -> 2024
+                        </p>
+                        <p>Je fais ce BUT pour devenir programmeur. Cette formation
+                            est très adapté pour mon parcours car elle ma offert un excellent suivie et
+                            ma permis d'apprendre énormement de chose durant ces 3 ans.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="panel_inverted"><img class="timeline-badge" src="./res/img/career/LogoIUTLille.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>IUT de Lille <span style="color: blue; font-weight: bold;">FORMATION</span></h3>
+                        <h2>BUT informatique</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">3 ans : 2021 -> 2024
+                        </p>
+                        <p>Je fais ce BUT pour devenir programmeur. Cette formation
+                            est très adapté pour mon parcours car elle ma offert un excellent suivie et
+                            ma permis d'apprendre énormement de chose durant ces 3 ans.
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li><img class="timeline-badge" src="./res/img/career/LogoSacreCoeur.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>Lycée Sacré-coeur de Tourcoing <span
+                                style="color: blue; font-weight: bold;">FORMATION</span></h3>
+                        <h2>Baccalauréat général</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">3 ans : 2018 -> 2021
+                        </p>
+                        <p>
+                            Mention bien. <br>Spécialités: Mathématiques et NSI. <br>Option:
+                            Math expertes.<br>
+                            C'est ici que j'ai trouvé ma voie vers l'informatique (Merci Python).
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="panel"><img class="timeline-badge" src="./res/img/career/LogoSacreCoeur.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>Collège Sacré-coeur de Tourcoing <span
+                                style="color: blue; font-weight: bold;">FORMATION</span></h3>
+                        <h2>Brevet des collèges</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">4 ans : 2014 -> 2018
+                        </p>
+                        <p>Mention très bien.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="panel_inverted"><img class="timeline-badge" src="./res/img/career/LogoSacreCoeur.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>Collège Sacré-coeur de Tourcoing <span
+                                style="color: blue; font-weight: bold;">FORMATION</span></h3>
+                        <h2>Brevet des collèges</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">4 ans : 2014 -> 2018
+                        </p>
+                        <p>Mension très bien.</p>
+                    </div>
+                </div>
+            </li>
+
+
+            <li><img class="timeline-badge" src="./res/img/career/LogoRenault.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>Renault <span style="color: orangered; font-weight: bold;">ENTREPRISE</span></h3>
+                        <h2>Stage sur site de R&D</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">1 semaine : 2019
+                        </p>
+                        <p>J'ai découvert le travail en grande entreprise ainsi que
+                            les multiples possibilités d’emploi existant.</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="panel"><img class="timeline-badge" src="./res/img/career/LogoIMC.png" alt="">
+                <div class="timeline-panel-container">
+                    <div class="timeline-panel">
+                        <h3>IMC J+R <span style="color: orangered; font-weight: bold;">ENTREPRISE</span></h3>
+                        <h2>Stage de directeur commercial</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">1 semaine : 2018
+                        </p>
+                        <p>J'ai découvert le travail en petite entreprise et le
+                            métier de directeur commercial. J'ai eu beaucoup de contact avec
+                            les clients.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="panel_inverted"><img class="timeline-badge" src="./res/img/career/LogoIMC.png" alt="">
+                <div class="timeline-panel-container-inverted">
+                    <div class="timeline-panel">
+                        <h3>IMC J+R <span style="color: orangered; font-weight: bold;">ENTREPRISE</span></h3>
+                        <h2>Stage de directeur commercial</h2>
+                        <p class="date">
+                            <img src="./res/img/career/clock-fill.svg">1 semaine : 2018
+                        </p>
+                        <p>J'ai découverte le travail en petite entreprise et le
+                            métier de directeur commercial. J'ai eu beaucoup de contact avec
+                            les clients.</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <div id="black-hole-separator">
+        <img src="./res/img/trou-noir.png" alt="TROU NOIR">
+    </div>
+
+    <section id="projects">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+        <h1 style="color: white;">PROJETS</h1>
+
+        <div id="projects-result" class="row">
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="image-modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+            <div class="caption"></div>
+        </div>
+    </section>
+
+    <div id="white-hole-separator">
+        <img src="./res/img/trou-blanc.png" alt="TROU BLANC">
+    </div>
+
+    <section id="contact">
+        <h1 style="color: white;">CONTACT</h1>
+
+        <div>
+            <h1 style="color: white;">JE SOUHAITE VOUS ACCOMPAGNER DIRECTION LES ETOILES !</h1>
+        </div>
+
+        <div class="row">
+            <div class="contact-info col col-sm col-md col-lg">
+                <h5>Mail:</h5>
                 <a href="mailto:secretin.morgan@gmail.com">
-                    <img src="img/Logo/LogoGmail.png" alt="Mail">
+                    <img src="./res/img/contact/LogoGmail.png" alt="Mail">
                 </a>
             </div>
 
-            <div class="contacter_div">
-                <h5>Téléphone:</h5> 
-                <a class="contacter_div_copy_link" href="">
-                    <img src="img/Icone/telephone2.png" alt="Telephone">
+            <div class="contact-info col col-sm col-md col-lg">
+                <h5>Téléphone:</h5>
+                <a id="clipboard-tel" href="">
+                    <img src="./res/img/contact/telephone2.png" alt="Telephone">
                 </a>
             </div>
-    
-            <div class="contacter_div">
-                <h5>Localisation:</h5> 
+
+            <div class="contact-info col col-sm col-md col-lg">
+                <h5>Localisation:</h5>
                 <a href="https://www.google.fr/maps/place/59200+Tourcoing/@50.721088,3.1225904,13z/data=!4m6!3m5!1s0x47c328d4be0a275d:
-                        0x252e317d7dad858f!8m2!3d50.724993!4d3.16207!16zL20vMDFxbm1q"
-                        target="_blank">
-                    <img src="img/Icone/IconeLocalisation.png" alt="Locatisation">	
+                        0x252e317d7dad858f!8m2!3d50.724993!4d3.16207!16zL20vMDFxbm1q" target="_blank">
+                    <img src="./res/img/contact/IconeLocalisation.png" alt="Locatisation">
                 </a>
             </div>
-    
-            <div class="contacter_div">
+
+            <div class="contact-info col col-sm col-md col-lg">
                 <h5>Linkedin:</h5>
-                <a href="https://www.linkedin.com/in/morgan-secretin/"
-                        target="_blank">
-                    <img src="img/Logo/LogoLinkedin.png" alt="">
+                <a href="https://www.linkedin.com/in/morgan-secretin/" target="_blank">
+                    <img src="./res/img/contact/LogoLinkedin.png" alt="">
                 </a>
             </div>
-            <p id="datemaj">Dérnière modification: 06/12/2023</p>
-        </footer>
-    </body>
+        </div>
+    </section>
+</body>
+
 </html>
