@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./res/img/welcome/LogoMorganSecretin.ico" type="image/x-icon">
-    
+
     <title>Portfolio</title>
 
     <link rel="stylesheet" href="./res/css/root.css">
@@ -15,13 +15,14 @@
 
     <script src="./res/js/main.js" defer></script>
     <script src="./res/js/projects.js" defer></script>
-    <script src="./res/js/reduce-bootstrap.js" defer></script>
+    <script src="./res/js/navbar.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href=""><img src="./res/img/welcome/LogoMorganSecretin.ico" width="50vh" alt="MS"></a>
+            <a class="navbar-brand" href=""><img src="./res/img/welcome/LogoMorganSecretin.ico" width="50vh"
+                    alt="MS"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,9 +40,8 @@
         </nav>
     </header>
 
-    <section id="start-pad">
-        <img id="poteau" src="./res/img/welcome/poteau.png" alt="">
-    </section>
+    <div id="start-pad">
+    </div>
 
     <img id="fusee" src="./res/img/welcome/fusee.png" alt="">
 
@@ -55,70 +55,75 @@
     <section id="welcome">
         <div id="bg"></div>
 
-        <div class="typewriter">
-            <p class="firstname">
-            <span>M</span>
-            <span>o</span>
-            <span>r</span>
-            <span>g</span>
-            <span>a</span>
-            <span>n</span>
-            </p>
-            <p class="surname">
-            <span>S</span>
-            <span>E</span>
-            <span>C</span>
-            <span>R</span>
-            <span>E</span>
-            <span>T</span>
-            <span>I</span>
-            <span>N</span>
-            </p>
-        </div>
+        <div class="grid-container">
+            <div class="typewriter welcome-top">
+                <p class="firstname">
+                    <span>M</span>
+                    <span>o</span>
+                    <span>r</span>
+                    <span>g</span>
+                    <span>a</span>
+                    <span>n</span>
+                </p>
+                <p class="surname">
+                    <span>S</span>
+                    <span>E</span>
+                    <span>C</span>
+                    <span>R</span>
+                    <span>E</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>N</span>
+                </p>
+            </div>
 
-        <img src="./res/img/welcome/Photo-profil.png" alt="[Pas de Morgan 😢]">
+            <div class="welcome-left">
+                <img src="./res/img/welcome/Photo-profil.png" alt="[Pas de Morgan 😢]">
+            </div>
 
-        <div id="about" class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Qui suis-je ?</h5>
-                        <p class="card-text">
-                            Je m'appelle Morgan Secrétin, j'ai 20 ans et je
-                            vais bientôt commencer un master Web chez Ynov
-                            Lille.
-                        </p>
-                    </div>
+            <section id="about" class="row welcome-right">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Qui suis-je ?</h5>
+                            <p class="card-text">
+                                Je m'appelle Morgan Secrétin, j'ai 20 ans et je
+                                vais bientôt commencer un master Web chez Ynov
+                                Lille.
+                            </p>
+                        </div>
 
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            Passionné d'informatique, j'aime apprendre
-                            et m'investir avec enthousiasme au sein d'une équipe.
-                        </li>
-                        <li class="list-group-item">
-                            Je maîtrise divers langages de programmation comme
-                            Java, PHP, Python, et JavaScript, ainsi que des
-                            technologies comme Docker, SQL, et Spring.
-                        </li>
-                        <li class="list-group-item">
-                            Mes intérêts incluent les projets de programmation,
-                            les jeux vidéo, le sport (tennis, badminton, babyfoot),
-                            le trekking, et les animés.
-                        </li>
-                        <li class="list-group-item">
-                            Pour mon futur master,
-                            j'ai d'ailleur trouvé une alternance dans l'entreprise
-                            IESI pour la durée de ma formation. Cela me pemettra
-                            de mettre en pratique mes compétences dans un
-                            environnement professionnel.
-                        </li>
-                    </ul>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                Passionné d'informatique, j'aime apprendre
+                                et m'investir avec enthousiasme au sein d'une équipe.
+                            </li>
+                            <li class="list-group-item">
+                                Je maîtrise divers langages de programmation comme
+                                Java, PHP, Python, et JavaScript, ainsi que des
+                                technologies comme Docker, SQL, et Spring.
+                            </li>
+                            <li class="list-group-item">
+                                Mes intérêts incluent les projets de programmation,
+                                les jeux vidéo, le sport (tennis, badminton, babyfoot),
+                                le trekking, et les animés.
+                            </li>
+                            <li class="list-group-item">
+                                Pour mon futur master,
+                                j'ai d'ailleur trouvé une alternance dans l'entreprise
+                                IESI pour la durée de ma formation. Cela me pemettra
+                                de mettre en pratique mes compétences dans un
+                                environnement professionnel.
+                            </li>
+                        </ul>
 
-                    <div class="card-footer text-muted">
-                        N'hésitez pas à me contacter pour mieux me connaitre ^_^
+                        <div class="card-footer text-muted">
+                            N'hésitez pas à me contacter pour mieux me connaitre ^_^
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
         </div>
 
     </section>
@@ -131,6 +136,30 @@
         <h1>Compétences</h1>
 
         <div class="container">
+            <div class="category-card">
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>Comment suis-je ? <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
+                </div>
+                <ul class="skills-list">
+                    <li
+                        onclick="showBubble(this, 'Je m\'adapte aux conversations, je suis à l\'écoute de mon entourage et je respecte TOUT mes interlocuteurs (même s\'ils ne sont pas de bonne humeur ^_^).')">
+                        Diplomate <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li onclick="showBubble(this, 'Je n\'ai aucun soucis pour prendre la parole et pour m\'intégrer dans un groupe. J\'adore parler ^_^')">
+                        EXTRA-verti ^_^ <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'J\'assume mes erreurs et mes difficultés. Je n\'attend pas sans rien faire.')">
+                        Honnéte ! <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li
+                        onclick="showBubble(this, 'Je ne me sent pas submergé par le travail et je n\'hésite à proposer des solutions à un probléme.')">
+                        Gestion du stress efficace <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable">
+                    </li>
+                    <li onclick="showBubble(this, '95% du temps la pêche que j\'essaye de communiquer aux autres.')">
+                        Joyeux <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                    <li onclick="showBubble(this, 'C\'est un minimum je pense...')">
+                        Ponctuel <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                </ul>
+            </div>
+
             <div class="category-card">
                 <div class="category-header" onclick="toggleCategory(this)">
                     <h3>Languages informatique <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
@@ -173,7 +202,8 @@
                         MySQL et MariaDB <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
                     <li
                         onclick="showBubble(this, 'J\'ai déjà réalisé divers MCD durant ma formation me permettant d\'en recréer au besoin.')">
-                        Modèle Logique de Données (MCD) <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
+                        Modèle Logique de Données (MCD) <img src="./res/img/tools/left-hand-pointer.svg"
+                            alt="cliquable"></li>
                     <li onclick="showBubble(this, 'Après tout, on peut stocker des données dans un fichier JSON...')">
                         JSON <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
                     <li
@@ -249,29 +279,6 @@
                     <li
                         onclick="showBubble(this, 'J\'ai appris la forme d\'un cycle en V mais n\'ai pas eu l\'occasion de la mettre en pratique.')">
                         Cycle en V <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header" onclick="toggleCategory(this)">
-                    <h3>Comment suis-je ? <img src="./res/img/tools/down-arrow.svg" alt="\/"></h3>
-                </div>
-                <ul class="skills-list">
-                    <li
-                        onclick="showBubble(this, 'Je m\'adapte aux conversations, je suis à l\'écoute de mon entourage et je respecte TOUT mes interlocuteurs (même s\'ils ne sont pas de bonne humeur ^_^).')">
-                        Diplomate <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
-                    <li onclick="showBubble(this, 'Pourquoi pas un appel ? J`\'adore parler.')">
-                        EXTRA-verti ^_^ <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
-                    <li
-                        onclick="showBubble(this, 'J\'assume mes erreurs et mes difficultés. Je n\'attend pas sans rien faire.')">
-                        Honnéte ! <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
-                    <li
-                        onclick="showBubble(this, 'Je ne me sent pas submergé par le travail et je n\'hésite à proposer des solutions à un probléme.')">
-                        Gestion du stress efficace <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
-                    <li onclick="showBubble(this, '95% du temps la pêche que j\'essaye de communiquer aux autres.')">
-                        Joyeux <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
-                    <li onclick="showBubble(this, 'C\'est un minimum je pense...')">
-                        Ponctuel <img src="./res/img/tools/left-hand-pointer.svg" alt="cliquable"></li>
                 </ul>
             </div>
 

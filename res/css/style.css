@@ -15,14 +15,6 @@
     height: 50px;
 }
 
-#poteau {
-    z-index: 1;
-    width: 10%;
-    position: absolute;
-    top: 0;
-    right: 10%;
-}
-
 section {
     padding-right: 10% !important;
 }
@@ -90,7 +82,8 @@ section {
     /*background: radial-gradient(ellipse at center, aqua 0%, aqua 50%, aqua 100%);*/
     overflow: hidden;
     background: radial-gradient(circle, #40baf2, #37a8dd, #2e97c9, #2586b5, #1b75a1);
-    min-height: 100vh; /* 100% hauteur ecran*/
+    min-height: 100vh;
+    /* 100% hauteur ecran*/
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
@@ -103,21 +96,79 @@ section {
     overflow: hidden;
     position: absolute;
 }
-#welcome svg polygon{
+
+#welcome svg polygon {
     z-index: 0;
     transition: 1.5s all;
 }
+
 /*
 #welcome {
     background: linear-gradient(to bottom, #91d7f3, rgb(98, 207, 244), rgb(44, 103, 242));
     padding-top: 50px;
 }*/
 
-#welcome img {
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.welcome-top {
+	grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.welcome-left {
     z-index: 1;
-    max-height: 80vh;
-    /* 80% hauteur ecran */
-    max-width: 100%;
+	grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.welcome-right {
+	grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    
+    .welcome-top {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border: red 5px solid;
+    }
+    .welcome-left {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border: green 5px solid;
+    }
+    .welcome-right {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border: blue 5px solid;
+    }
+    
+}
+
+#welcome .welcome-left img {
+    /*max-height: 80vh;*/ /* 80% hauteur ecran */
+    max-width: 40vh;
     border-bottom: 6px black solid;
     border-radius: 20px;
 }
@@ -142,7 +193,7 @@ section {
     opacity: 0;
     animation: appear 1s forwards;
     font-family: 'Russo One', sans-serif;
-    color: rgba(54,95,160,1);
+    color: rgba(54, 95, 160, 1);
     font-size: 4vw;
     text-transform: uppercase;
     text-shadow: lightblue 2px 5px;
