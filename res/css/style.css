@@ -12,8 +12,11 @@
     0% {
         transform: rotateZ(5deg);
     }
-    100% {
+    50% {
         transform: rotateZ(-5deg);
+    }
+    100% {
+        transform: rotateZ(5deg);
     }
 }
 
