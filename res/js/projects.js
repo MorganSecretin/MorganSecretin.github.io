@@ -260,11 +260,11 @@ const data = [
           heat</a> <br>Le site se base sur une entreprise fictive de notre
       création. Mon camarade avais de bien meilleur compétence que moi en
       html, css et javaScript. Néanmoins, nous nous sommes trés bien
-      répartie le travail. J'ai donc pu apprendre sur le taf
+      réparti le travail. J'ai donc pu apprendre sur le taf
       l'utilisation de ces languages web. Nous avons créé un site de
       vente de chauffage minant de la cryptommonaie. Nous étions
       passionnés par le sujet de notre travail. Nous nous sommes donc
-      donner à fond. Le rendu est beau et donne envie malgrés qu'il ne
+      donner à fond. Le rendu est beau et donne envie bien qu'il ne
       soit pas fonctionnel car demander dans les consignes.`,
     active: false,
   },
@@ -309,7 +309,7 @@ const data = [
     bigDescription: `C'est un projet qui m'a permis d'en apprendre beaucoup 
                       sur le système de base de données en API rest.
                       Il a été réalisé en binome. J'ai pu réalisé un exellent travail
-                      avec mon partenaire car nous nous sommes extrêmement bien réparti
+                      avec mon partenaire car nous nous sommes bien réparti
                       les tâches et nous avons tous deux progréssés. La découverte de
                       tomcat et très intérréssantes et utile pour un serveur en java.`,
     active: false,
