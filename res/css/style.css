@@ -160,21 +160,18 @@ section {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-        border: red 5px solid;
     }
     .welcome-left {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
-        border: green 5px solid;
     }
     .welcome-right {
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 4;
-        border: blue 5px solid;
     }
     
 }
