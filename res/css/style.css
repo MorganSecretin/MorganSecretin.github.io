@@ -720,6 +720,12 @@ section {
     position: relative;
 }
 
+.detailButton {
+    color: blue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /******************************************************/
 
 /* SECTIONS */

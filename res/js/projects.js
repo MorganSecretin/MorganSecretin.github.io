@@ -44,12 +44,12 @@ const data = [
     others: "",
     technos: ``,
     skills: ``,
-    date: ``,
+    date: `2024-09-01`,
     littleDescription: `Site de gestion de planning entre clients et 
                               services.`,
     link: ``,
     titleLink: ``,
-    bigDescription: ``,
+    bigDescription: `Dans le cadre d'un projet scolaire, j'ai participé au développement de TimePlanner, un site de gestion de planning entre clients et services. Ce projet m'a permis de mettre en pratique mes compétences en Java et d'explorer les défis liés à la gestion de données de planification et à la conception d'interfaces utilisateur. J'ai également travaillé en équipe pour intégrer différentes fonctionnalités et assurer la fluidité de l'expérience utilisateur.`,
     active: true,
   },
   {
@@ -61,12 +61,12 @@ const data = [
     others: "",
     technos: ``,
     skills: ``,
-    date: ``,
+    date: `2024-01-31`,
     littleDescription: `Conception complexe d'un Processeur en Golang pour 
                               réaliser un jeu entre plusieurs CPU.`,
     link: ``,
     titleLink: ``,
-    bigDescription: ``,
+    bigDescription: `Dans ce projet scolaire, j'ai contribué à la conception et à la simulation d'un processeur en Golang pour réaliser un jeu entre plusieurs CPU. Ce projet a été une excellente opportunité pour approfondir mes connaissances en programmation et sur les CPUs. J'ai travaillé sur plusieurs aspects techniques du projet, y compris l'optimisation des performances avec du binaire et la gestion de la communication entre les CPU simulés. Cette expérience m'a permis d'améliorer mes compétences en compréhension et en développement de logiciels complexes.`,
     active: true,
   },
   {
@@ -368,8 +368,9 @@ const html = data.reduce((accumulator, project) => {
   
               <div class="card-body project-card-body">
                   <h2 class="card-title">${project.title}</h2>
-                  <time class="text-muted" datetime="2023-04-14">14/04/2023</time>
+                  <time class="text-muted projectDate">${project.date}</time>
                   <p class="card-text">${project.littleDescription}</p>
+                  <p class="detailButton" onclick="showBubble(this, \`${project.bigDescription}\`)">Des details ?</p>
               </div>
           </div>
       </div>
@@ -378,6 +379,24 @@ const html = data.reduce((accumulator, project) => {
 }, "");
 const projectsResult = document.querySelector("#projects-result");
 projectsResult.innerHTML = html;
+
+function formatDateToFR(dateString) {
+  const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+  const date = new Date(dateString);
+  return date.toLocaleDateString('fr-FR', options);
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const dateElements = document.getElementsByClassName('projectDate');
+    for (let i = 0; i < dateElements.length; i++) {
+      const dateElement = dateElements[i];
+      const date = dateElement.textContent.trim();
+      if (date) {
+        const formattedDate = formatDateToFR(date);
+        dateElement.textContent = formattedDate;
+      }
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
   var images = document.querySelectorAll(".clickable-image");
