@@ -364,6 +364,12 @@ section {
     cursor: pointer;
 }
 
+/* Ajoutez cette section à votre fichier CSS */
+.skills-list li.active {
+    background-color: #d3d3d3; /* Vous pouvez choisir la couleur que vous voulez */
+    color: #000; /* Vous pouvez également personnaliser la couleur du texte */
+  }
+
 .category-card.expanded .skills-list {
     display: block;
 }

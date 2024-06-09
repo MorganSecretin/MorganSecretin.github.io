@@ -327,6 +327,14 @@ function showBubble(element, text) {
   const bubble = document.getElementById("infoBubble");
   const bubbleText = document.getElementById("bubbleText");
 
+  // Retirer la classe active de tous les éléments
+  const allSkills = document.querySelectorAll('.skills-list li');
+  allSkills.forEach(skill => skill.classList.remove('active'));
+
+  // Ajouter la classe active à l'élément cliqué
+  element.classList.add('active');
+
+
   bubbleText.textContent = text;
   bubble.style.display = "block";
 }
@@ -334,6 +342,10 @@ function showBubble(element, text) {
 function hideBubble() {
   const bubble = document.getElementById("infoBubble");
   bubble.style.display = "none";
+
+  // Retirer la classe active de tous les éléments
+  const allSkills = document.querySelectorAll('.skills-list li');
+  allSkills.forEach(skill => skill.classList.remove('active'));
 }
 /*****************************************************************************/
 
