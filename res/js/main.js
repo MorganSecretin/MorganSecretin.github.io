@@ -1,5 +1,24 @@
 console.log("Hello work !");
 
+/* FUSEE */
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let fusee = document.getElementById("fusee");
+    let st = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (st > lastScrollTop) {
+        // Scrolling down
+        fusee.classList.remove("flip");
+    } else {
+        // Scrolling up
+        fusee.classList.add("flip");
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    
+});
+/*********************************************************/
+
 /* WELCOME */
 let betweenLinesColor = 150;
 let numPointsX = null;
